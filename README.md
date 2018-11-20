@@ -1,0 +1,9 @@
+# LSMPClient
+
+This repo is used to store a client code for the lakeshore market place. It's used with the server side code of the application.
+The project is a node project. For the UI, we used twitter bootstrap, jquery and javascript.
+
+1. Need to install node js. 
+2. Then do npm install to install all dependencies. 
+3. Finally, to run the app use the command "npm run gulp" on Git bash.
+4. To see the app in the browser use the url: "localhost:8090". The port number is 8090. 
