@@ -41,7 +41,10 @@ function myfunc(url) {
                     edition: ""+book.edition,
                     isbn: ""+book.isbn,
                     publisher: ""+book.publisher,
-                    price: ""+book.sellingPrice
+                    price: ""+book.sellingPrice,
+                    inventorylink: book.link[0].url,
+                    reviewslink: book.link[1].url,
+                    creviewlink: book.link[2].url
                 };
 
                 //replace all the variables within the compiled script tag above with each value of employee data.
@@ -52,10 +55,12 @@ function myfunc(url) {
 
 
         });
+        
 }
 
 
 function getProductID(){
     return $("input[name=productID]").val();
 }
+
 

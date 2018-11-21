@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>Registration Form</title>
+
+	    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+	    <script src="/scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+		<style type="text/css">
+			#deceased{
+			    background-color:#FFF3F5;
+				padding-top:10px;
+				margin-bottom:10px;
+			}
+			.remove_field{
+				float:right;	
+				cursor:pointer;
+				position : absolute;
+			}
+			.remove_field:hover{
+				text-decoration:none;
+			}
+			body{
+				background-color:#927b88;
+			}
+		</style>
+	  </head>
+ 	<body>
+	<div class="panel panel-primary" style="margin:20px;">
+		<div class="panel-heading">
+	        <h3 class="panel-title">Registration Form</h3>
+		</div>
+		<div class="panel-body">
+		    <form>
+				<div class="col-md-12 col-sm-12">
+					<div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="liginid">Login Id*	</label>
+				            <input type="text" class="form-control input-sm" id="loginid" placeholder="">
+				        </div>
+				        <div class="form-group col-md-6 col-sm-6">
+				            <label for="firstname">First Name*</label>
+				            <input type="text" class="form-control input-sm" id="firstname" placeholder="">
+				        </div>
+					</div>
+					<div class="row">
+				        <div class="form-group col-md-6 col-sm-6">
+				            <label for="middlename">Middle Name*</label>
+				            <input type="text" class="form-control input-sm" id="middlename" placeholder="">
+				        </div>
+				        <div class="form-group col-md-6 col-sm-6">
+				            <label for="lastname">Last Name*</label>
+				            <input type="text" class="form-control input-sm" id="lastname" placeholder="">
+				        </div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="email">Email*</label>
+				            <input type="text" class="form-control input-sm" id="email" placeholder="">
+				        </div>
+					
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="password">Password*</label>
+				            <input type="text" class="form-control input-sm" id="password" placeholder="">
+				        </div>
+				    </div>
+				    <div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="sellerlevel">Seller Level*</label>
+				            <select class="form-control input-sm" id="levels">
+								<option>-- Select Seller Level --</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+					        </select>
+				        </div>
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="sellername">Seller Name*</label>
+				            <input type="text" class="form-control input-sm" id="sellername" placeholder="">
+				        </div>
+				    </div>
+				    <p><b>Address</b></p>
+				    <div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="street">Street*</label>
+				            <input type="text" class="form-control input-sm" id="street" placeholder="">
+				        </div>
+
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="city">City</label>
+				            <input type="text" class="form-control input-sm" id="city" placeholder="">
+				        </div>
+				    </div>
+				    <div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="state">State*</label>
+				            <input type="text" class="form-control input-sm" id="state" placeholder="">
+				        </div>
+
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="zipcode">Zipcode</label>
+				            <input type="text" class="form-control input-sm" id="zipcode" placeholder="">
+				        </div>
+				    </div>
+				    <p><b>Phone</b></p>
+				    <div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="phonenumber">Phone Number</label>
+				            <input type="text" class="form-control input-sm" id="phonenumber" placeholder="">
+				        </div>
+				        <div class = "form-group col-md-6 col-sm-6">
+					      <label for="type">Type*</label>	
+				     
+					      <select class="form-control input-sm" id="types">
+								<option>-- Select Phone Type --</option>
+								<option>Home</option>
+								<option>Office</option>
+					      </select>
+						</div>
+				    </div>
+				    <p><b>Card Information</b></p>
+				    <div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="cardnumber">Card Number</label>
+				            <input type="text" class="form-control input-sm masked" id="cardnumber" placeholder="">
+				        </div>
+				        <div class="form-group col-md-6 col-sm-6">
+				            <label for="cvv">Cvv</label>
+				            <input type="text" class="form-control input-sm" id="cvv" placeholder="">
+				        </div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6 col-sm-6">
+				            <label for="expirymonth">Expiry Month</label>
+				            <input type="text" class="form-control input-sm" id="expirymonth" placeholder="">
+				        </div>
+				        <div class="form-group col-md-6 col-sm-6">
+				            <label for="expiryear">Expiry Year</label>
+				            <input type="text" class="form-control input-sm" id="expiryear" placeholder="">
+				        </div>
+				    </div>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<div class="form-group col-md-12 col-sm-12 text-right" >
+						<input type="submit" class="btn btn-primary" value="Submit"/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

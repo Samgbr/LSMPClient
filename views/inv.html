@@ -17,7 +17,6 @@
     <link href="/css/4-col-portfolio.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
     <script src="/scripts/search.js"></script>
-    <script src="/scripts/inv.js"></script>
     <script src="/scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
     <script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
 
@@ -36,10 +35,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="#">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="#">Register</a>
           </li>
         </ul>
       </div>
@@ -78,13 +77,19 @@
             <p class="card-text">isbn: {{isbn}}</p>
             <p class="card-text">Publisher: {{publisher}}</p>
             <p class="card-text">Price: {{price}}</p>
-            <p><a class="btn btn-primary inv" href="{{inventorylink}}">Check Availability</a></p>
-            <p><button id="review" value="{{reviewslink}}" class="btn btn-primary">Customer Reviews</button></p>
-            <p><button id="crev" value="{{creviewlink}}" class="btn btn-primary">Review this Book</button></p>
+            <p><a href="/inv" class="btn btn-primary">Check Availability</a></p>
+            <p><a href="{{reviewslink}}" class="btn btn-primary">Customer Reviews</a></p>
+            <p><a href="{{creviewlink}}" class="btn btn-primary">Review this Book</a></p>
           </div>
         </div>
       </div>
 
+    </script>
+
+    <script id="inv-modal-template" type="text/x-handlebars-template">
+      <div>
+        <p class="card-text">Stock: {{qty}}</p>
+      </div>
     </script>
 
     <!-- Page Content -->
@@ -100,6 +105,12 @@
 
       </div>
       <!-- /.row -->
+      <div class="row" id="inv">
+
+
+
+      </div>
+
       <!-- Pagination -->
       <ul class="pagination justify-content-center">
         <li class="page-item">

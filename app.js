@@ -14,8 +14,25 @@ app.set('view engine', 'html');
 const PORT=8090; 
 
 app.get('/', function(req, res){
+    res.render('welcome');
+});
+
+app.get('/home', function(req, res){
     res.render('home');
 });
+
+app.get('/inv', function(req, res){
+    res.render('inv');
+});
+
+app.get('/register', function(req, res){
+    res.render('register');
+});
+
+app.get('/pregister', function(req, res){
+    res.render('pregister');
+});
+
 
 app.listen(PORT);
 
