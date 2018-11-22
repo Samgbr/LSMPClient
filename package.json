@@ -40,6 +40,6 @@
     },
     "scripts": {
         "gulp": "nodemon gulp",
-        "start": "node app.js"
+        "start": "nodemon app.js"
     }
 }
