@@ -3,7 +3,7 @@ var browserSync = require('browser-sync').create();
 var pkg = require('./package.json');
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
+gulp.task('public/vendor', function() {
 
   // Bootstrap
   gulp.src([
@@ -11,19 +11,19 @@ gulp.task('vendor', function() {
       '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
       '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
     ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
+    .pipe(gulp.dest('./public/vendor/bootstrap'))
 
   // jQuery
   gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery'))
+    .pipe(gulp.dest('./public/vendor/jquery'))
 
 })
 
 // Default task
-gulp.task('default', ['vendor']);
+gulp.task('default', ['public/vendor']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -36,6 +36,6 @@ gulp.task('browserSync', function() {
 
 // Dev task
 gulp.task('dev', ['browserSync'], function() {
-  gulp.watch('./css/*.css', browserSync.reload);
-  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('./public/css/*.css', browserSync.reload);
+  gulp.watch('./views/*.html', browserSync.reload);
 });
