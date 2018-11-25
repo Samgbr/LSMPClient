@@ -5,5 +5,5 @@ The project is a node project. For the UI, we used twitter bootstrap, jquery and
 
 1. Need to install node js. 
 2. Then do npm install to install all dependencies. 
-3. Finally, to run the app use the command "npm run gulp" on Git bash.
+3. Finally, to run the app use the command "npm run start" on Git bash.
 4. To see the app in the browser use the url: "localhost:8090". The port number is 8090. 
