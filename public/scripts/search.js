@@ -1,4 +1,12 @@
 
+var ref = window.location.href;
+
+var url = new URL(ref);
+
+var c = url.searchParams.get("id");
+
+console.log(c);
+
 $(document).ready(function () {
         //submit the add employee form to the server
     $('form').submit(function (event) {

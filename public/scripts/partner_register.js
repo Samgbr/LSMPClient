@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    var shopperResourceURI= "http://localhost:8082/Customer/shopperservice/shopper"
+    var shopperResourceURI= "http://localhost:8082/Partner/partnerservice/partner"
 
 
     //submit the add shopper form to the server
@@ -34,9 +34,11 @@ $(document).ready(function () {
             'lastName': getLastName(),
             'email': getEmail(),
             'password': getPassword(),
+            'sellerLevel': getSellerLevel(),
+            'sellerName': getSellerName(),
             'addresses': addressData,
             'phones': phoneData,
-            'bills': billData
+            'billingsInfo': billData
         };
 
          $.ajax({
@@ -51,7 +53,7 @@ $(document).ready(function () {
             encode: true
         }).done(function(returnedData){
 
-            alert("Customer has been added");
+            alert("Partner has been added");
             window.location = '/';
 
         });
@@ -105,6 +107,10 @@ $(document).ready(function () {
         return $("input[name=phoneNumber]").val();
     }
 
+    function getSellerLevel() {
+        return $("#levels option:selected").text();
+    }
+
     function getType() {
         return $("#types option:selected").text();
     }
@@ -123,6 +129,10 @@ $(document).ready(function () {
 
     function getExpiryYear() {
         return $("input[name=expirYear]").val();
+    }
+
+    function getSellerName() {
+        return $("input[name=sellerName]").val();
     }
 
 });
