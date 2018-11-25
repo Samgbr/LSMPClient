@@ -26,6 +26,7 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-4-col-portfolio.git"
     },
     "dependencies": {
+        "bcrypt": "^3.0.2",
         "bootstrap": "^4.1.1",
         "ejs": "^2.6.1",
         "express": "^4.16.4",
