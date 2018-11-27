@@ -7,29 +7,35 @@ var c = url.searchParams.get("id");
 
 console.log(c);
 
+if(c == null) {
+        alert("Login");
+        window.location='/error';
+}
+
 $(document).ready(function () {
-        //submit the add employee form to the server
+
     $('form').submit(function (event) {
-        event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
-        var bookResourceURI= "http://localhost:8082/BookProduct/bookservice/book/"
-        var url=bookResourceURI+getProductID()
-        $.ajax({
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            url: bookResourceURI+getProductID(),
-            data: JSON.stringify(getProductID()),
-            dataType: 'json',
-            encode: true
-        }).done(function(returnedData){
+                event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
+                var bookResourceURI= "http://localhost:8082/BookProduct/bookservice/book/"
+                var url=bookResourceURI+getProductID()
+                $.ajax({
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    url: bookResourceURI+getProductID(),
+                    data: JSON.stringify(getProductID()),
+                    dataType: 'json',
+                    encode: true
+                }).done(function(returnedData){
 
-            //alert("book found");
+                    //alert(resp);
 
-        });
-        myfunc(url);
-    });
+                });
+                myfunc(url);
+            });
+    
        
 });
 
@@ -52,7 +58,8 @@ function myfunc(url) {
                     price: ""+book.sellingPrice,
                     inventorylink: book.link[0].url,
                     reviewslink: book.link[1].url,
-                    creviewlink: book.link[2].url
+                    creviewlink: book.link[2].url,
+                    id:c
                 };
 
                 //replace all the variables within the compiled script tag above with each value of employee data.
@@ -61,11 +68,24 @@ function myfunc(url) {
                 //embed the html element which contains employee information into the html div tag with id 'content'
                 $("#content").append(bookElementToAppend);
 
+                qtyOnHandfunc(bookData.inventorylink);
 
         });
         
 }
 
+
+function qtyOnHandfunc(invlink) {
+
+     $.getJSON(invlink, function (book) {
+
+            var qtyonhand = JSON.stringify(book.qty);
+            $("#qty").text("In stock: " + qtyonhand);
+            //alert(qtyonhand);
+
+        });
+    
+}
 
 function getProductID(){
     return $("input[name=productID]").val();
