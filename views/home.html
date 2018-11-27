@@ -17,8 +17,6 @@
     <link href="/css/4-col-portfolio.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
     <script src="/scripts/search.js"></script>
-    <script src="/scripts/inv.js"></script>
-    <script src="/scripts/welcome.js"></script>
     <script src="/scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
     <script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
 
@@ -27,9 +25,9 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">LSMP - Book Store</a>
+        <a class="navbar-brand" href="#" style="margin-left: 100px;">LSMP - Book Store</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,7 +48,7 @@
 
     <div class="container form-layout" style="margin-top: 1%">
 
-      <h3 class="my-3">Welcome</h3>
+      <h3 class="my-3" style="color: white">Welcome</h3>
       <form>
         <div class="form-row">
           <div class="input-group col-md-6">
@@ -67,9 +65,9 @@
     <!-- a script for dynamically generating employees on the homepage. uses handlebard library. More info: https://handlebarsjs.com/ -->
     <script id="book-modal-template" type="text/x-handlebars-template">
 
-      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{productID}}">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{id}}">
         <div class="card h-100">
-          <!--<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+          <a href="#"><img class="card-img-top" src="/images/bk1.jpg" alt=""></a>
           <div class="card-body">
             <h6 class="card-title">
               <a href="#">Title: {{title}}</a>
@@ -79,9 +77,8 @@
             <p class="card-text">isbn: {{isbn}}</p>
             <p class="card-text">Publisher: {{publisher}}</p>
             <p class="card-text">Price: {{price}}</p>
-            <p><a class="btn btn-primary inv" href="{{inventorylink}}">Check Availability</a></p>
-            <p><button id="review" value="{{reviewslink}}" class="btn btn-primary">Customer Reviews</button></p>
-            <p><button id="crev" value="{{creviewlink}}" class="btn btn-primary">Review this Book</button></p>
+            <p><a href="/reviews?link={{reviewslink}}">Customer Reviews</a></p>
+            <p><a href="/creviews?link={{creviewlink}}">Review this Book</a></p>
           </div>
         </div>
       </div>
@@ -92,8 +89,8 @@
     <div class="container" style="margin-top: 2%">
 
       <!-- Page Heading -->
-      <p class="my-2"><i>Search result:</i></p>
-
+      <p class="my-2" style="color: white"><i>Search result:</i></p>
+      <p id="qty" style="color:white";></p>
       <!-- the html div tag where the employee content will be dynamically generated into. Look at hr_employee.js for the code responsible for generating that content -->
       <div class="row" id="content">
 

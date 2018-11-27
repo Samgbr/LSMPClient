@@ -7,6 +7,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
+    background-image: url(/images/bgshop.jpg);
   }
 }
 
@@ -14,6 +15,3 @@ body {
   margin-bottom: 30px;
 }
 
-.pagination {
-  margin-bottom: 30px;
-}

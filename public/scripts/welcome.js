@@ -6,10 +6,34 @@ $(document).ready(function () {
 
     //submit the add login form to the server
     $('form').submit(function (event) {
-            event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
+        event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
 
         if($('input:checkbox[name=ckme]').is(':checked')) {
-            alert("checked partner page opens");
+            
+            var partnerResourceURI= "http://localhost:8082/Partner/partnerservice/partner/"
+            
+            $.ajax({
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                url: partnerResourceURI+getLoginID()+'/'+getPassword(),
+                data: JSON.stringify(getLoginID()),
+                dataType: 'json',
+                encode: true
+            }).done(function(returnedData){
+
+                if (!returnedData.profileID) {
+                    alert("Login Unsuccessful");
+                    window.location='/';
+                    return;
+                }
+        
+                alert("login Successful" + "  " +returnedData.profileID);
+                window.location="/phome?id="+returnedData.profileID;
+
+            });
         } else {
             var shopperResourceURI= "http://localhost:8082/Customer/shopperservice/shopper/"
             //var url=shopperResourceURI+getLoginID()+'/'+getPassword()
