@@ -1,3 +1,6 @@
+if(checkCookie() === "") {
+    window.location='/';
+}
 
 var ref = window.location.href;
 
@@ -7,12 +10,20 @@ var c = url.searchParams.get("id");
 
 console.log(c);
 
-if(c == null) {
-        alert("Login");
-        window.location='/error';
-}
-
 $(document).ready(function () {
+
+     $(".greet").text("Welcome "+ checkCookie());
+
+    $( "#logout" ).click(function() {
+        document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
+    });
+
+     $( "#profile" ).click(function() {
+        //add href when clicked with user id
+        $("#profile").attr("href", "/profile?id="+c);
+    });
+
+     $(".order").hide();
 
     $('form').submit(function (event) {
                 event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
@@ -35,8 +46,6 @@ $(document).ready(function () {
                 });
                 myfunc(url);
             });
-    
-       
 });
 
 function myfunc(url) {
@@ -66,7 +75,7 @@ function myfunc(url) {
                 var bookElementToAppend = book_modal_template(bookData);
 
                 //embed the html element which contains employee information into the html div tag with id 'content'
-                $("#content").append(bookElementToAppend);
+                $("#content").prepend(bookElementToAppend);
 
                 qtyOnHandfunc(bookData.inventorylink);
 
@@ -80,15 +89,51 @@ function qtyOnHandfunc(invlink) {
      $.getJSON(invlink, function (book) {
 
             var qtyonhand = JSON.stringify(book.qty);
+            var order = JSON.stringify(book.link[0].url);
             $("#qty").text("In stock: " + qtyonhand);
+            if(qtyonhand==0) {
+                $(".orderInfo").text("Sorry out of stock");
+            }
+            if(qtyonhand>0) {
+                $(".orderInfo").hide();
+                $(".order").attr("href", "/Order?link="+invlink+"&id="+c);
+                $(".order").text("Order");
+                $(".order").show();
+            }
             //alert(qtyonhand);
 
         });
     
 }
 
+
 function getProductID(){
     return $("input[name=productID]").val();
 }
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
+function checkCookie() {
+    var username = getCookie("name");
+    if (username != "") {
+        $('#greet').text("Welcome " + username);
+        return username;
+    } else {
+        alert("Not logged in");
+       return "";
+    }
+}

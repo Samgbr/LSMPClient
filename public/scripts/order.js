@@ -8,7 +8,14 @@ var url = new URL(ref);
 
 var link = url.searchParams.get("link");
 
-console.log(link);
+var id = url.searchParams.get("id");
+
+console.log(link + " " + id);
+
+
+$(document).ready(function () {
+    $('#greet').text("Welcome " + checkCookie());
+});
 
 
 function getCookie(cname) {
@@ -30,7 +37,6 @@ function getCookie(cname) {
 function checkCookie() {
     var username = getCookie("name");
     if (username != "") {
-        $('#greet').text("Welcome " + username);
         return username;
     } else {
         alert("Not logged in");

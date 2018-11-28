@@ -25,6 +25,14 @@ app.get('/register' ,function(req,res) {
 	res.render('register');
 });
 
+app.get('/order' ,function(req,res) {
+	res.render('order');
+});
+
+app.get('/profile' ,function(req,res) {
+	res.render('profile');
+});
+
 app.get('/error' ,function(req,res) {
 	res.render('error');
 });
@@ -39,6 +47,10 @@ app.get('/phome' ,function(req,res) {
 
 app.get('/reviews' ,function(req,res) {
 	res.render('reviews');
+});
+
+app.get('/creview' ,function(req,res) {
+	res.render('creview');
 });
 
 app.get('/' ,function(req,res) {

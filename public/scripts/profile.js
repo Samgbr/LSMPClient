@@ -6,9 +6,17 @@ var ref = window.location.href;
 
 var url = new URL(ref);
 
-var link = url.searchParams.get("link");
+var id = url.searchParams.get("id");
 
-console.log(link);
+console.log(id);
+
+
+
+
+$(document).ready(function () {
+
+    $(".greet").text("Hey "+ checkCookie());
+});
 
 
 function getCookie(cname) {
@@ -30,7 +38,6 @@ function getCookie(cname) {
 function checkCookie() {
     var username = getCookie("name");
     if (username != "") {
-        $('#greet').text("Welcome " + username);
         return username;
     } else {
         alert("Not logged in");
