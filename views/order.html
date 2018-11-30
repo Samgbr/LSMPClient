@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/scripts/order.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<p id="greet"></p>
+<form>
+	<label>Qty</label>
+	<input type="text" name="qtyOrdered" placeholder="qty"/>
+	<input type="submit" name="submit" id="submit" value="submit">
+</form>
+<p>Your Order Detail</p>
+<div class="content">
+	<p id="orderID"></p>
+	<p id="qty"></p>
+	<p id="amount"></p>
+	<button id="pay">Pay</button>
+</div>
+<div class="pay">
+	<p>Your Payment Details</p>
+	<p id="amtpaid"></p>
+	<p id="status"></p>
+	<p id="confirm"></p>
+</div>
+<a href="/home">Go back</a>
+</html>
