@@ -20,7 +20,7 @@ $(document).ready(function () {
 
      $( "#profile" ).click(function() {
         //add href when clicked with user id
-        $("#profile").attr("href", "/profile?id="+c);
+        $("#profile").attr("href", "/profile");
     });
 
      $(".order").hide();
@@ -51,7 +51,6 @@ $(document).ready(function () {
 function myfunc(url) {
      //extract whatever is inside of the script tag with an id of employee-modal-template
         var source = $("#book-modal-template").html();
-
         var book_modal_template = Handlebars.compile(source);
 
         //retrieve all the employees from server then display them on the homepage
@@ -73,34 +72,32 @@ function myfunc(url) {
 
                 //replace all the variables within the compiled script tag above with each value of employee data.
                 var bookElementToAppend = book_modal_template(bookData);
-
                 //embed the html element which contains employee information into the html div tag with id 'content'
                 $("#content").prepend(bookElementToAppend);
 
-                qtyOnHandfunc(bookData.inventorylink);
+                qtyOnHandfunc(bookData.inventorylink,bookData.price);
 
         });
         
 }
 
 
-function qtyOnHandfunc(invlink) {
-
+function qtyOnHandfunc(invlink,price) {
+    
      $.getJSON(invlink, function (book) {
 
             var qtyonhand = JSON.stringify(book.qty);
-            var order = JSON.stringify(book.link[0].url);
+            var inv = JSON.stringify(book.link[0].url);
             $("#qty").text("In stock: " + qtyonhand);
-            if(qtyonhand==0) {
-                $(".orderInfo").text("Sorry out of stock");
-            }
-            if(qtyonhand>0) {
-                $(".orderInfo").hide();
-                $(".order").attr("href", "/Order?link="+invlink+"&id="+c);
-                $(".order").text("Order");
-                $(".order").show();
-            }
-            //alert(qtyonhand);
+                if(qtyonhand==0) {
+                    $(".orderInfo").text("Sorry out of stock");
+                }
+                if(qtyonhand>0) {
+                    $(".orderInfo").hide();
+                    $(".order").attr("href", "/Order?link="+inv+"&id="+c+"&pid="+getProductID()+"&price="+price);
+                    $(".order").text("Order");
+                    $(".order").show();
+                }
 
         });
     
