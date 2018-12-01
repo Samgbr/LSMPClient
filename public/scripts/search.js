@@ -58,6 +58,7 @@ function myfunc(url) {
         $.getJSON(url, function (book) {
 
                 var bookData = {
+                    productID: ""+book.productID,
                     title: ""+book.title,
                     author: ""+book.author,
                     edition: ""+book.edition,

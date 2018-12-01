@@ -8,7 +8,63 @@ var url = new URL(ref);
 
 var link = url.searchParams.get("link");
 
-console.log(link);
+var id = url.searchParams.get("id");
+
+var pid = url.searchParams.get("pid");
+
+console.log(link+ " "+ id+" "+pid);
+
+
+
+$(document).ready(function () {
+    var source = $("#reviews-modal-template").html();
+
+    var reviews_modal_template = Handlebars.compile(source);
+
+     var reviewResourceURI= "http://localhost:8082/ProductReview/productreviewservice/productreviews/"+id;
+
+     $.getJSON(reviewResourceURI, function (review) {
+
+        for (var i = 0; i < review.length; i++) {
+                var reviewData = {
+                    productID: ""+review[i].productID,
+                    profileID: ""+review[i].profileID,
+                    review: ""+review[i].review,
+                    rate: ""+review[i].rating
+                };
+                //alert("Rate data: "+review[0].rating);
+            var reviewsElementToAppend = reviews_modal_template(reviewData);
+
+            //embed the html element which contains employee information into the html div tag with id 'content'
+            $("#content").append(reviewsElementToAppend);
+            }
+        });
+
+     /*
+     $.ajax({
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                url: reviewResourceURI+id,
+                data: JSON.stringify(id),
+                dataType: 'json',
+                encode: true
+            }).done(function(returnedData){
+
+                if (!returnedData.productID) {
+                    alert("No Reviews Yet "+returnedData.productID);
+                    window.location='/home?id='+pid;                                        
+                } else {
+                    alert("Reviews found: "+returnedData.productID);
+                    
+                }
+            });  */
+});
+
+
+
 
 
 function getCookie(cname) {

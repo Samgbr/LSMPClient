@@ -28,21 +28,6 @@ $(document).ready(function () {
             $('#phone').text("Phone Number: " + returnedData.phones[0].phoneNumber);
             $('#cardno').text("Card Number: " + returnedData.bills[0].creditCardNumber);
             $('#cvv').text("Cvv: " + returnedData.bills[0].cvv);
-            /*
-            $.ajax({
-                method: 'GET',
-                headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
-                        },
-                url: bookResourceURI+loginid,
-                data: JSON.stringify(loginid),
-                dataType: 'json',
-                encode: true
-            }).done(function(returnedData){
-
-            });  */
-
         });
 });
 
