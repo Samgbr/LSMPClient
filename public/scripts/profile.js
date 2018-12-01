@@ -20,13 +20,13 @@ $(document).ready(function () {
             dataType: 'json',
             encode: true
         }).done(function(returnedData){
-            $('#name').text("Name: " + returnedData.firstName+ " "+returnedData.lastName);
-            $('#email').text("Email: " + returnedData.email);
-            $('#street').text("Street: " + returnedData.addresses[0].street);
-            $('#city').text("City: " + returnedData.addresses[0].city);
-            $('#zip').text("Zip: " + returnedData.addresses[0].zipcode);
-            $('#phone').text("Phone Number: " + returnedData.phones[0].phoneNumber);
-            $('#cardno').text("Card Number: " + returnedData.bills[0].creditCardNumber);
+            $('#name').text(returnedData.firstName+ " "+returnedData.lastName);
+            $('#email').text(returnedData.email);
+            $('#street').text(returnedData.addresses[0].street);
+            $('#city').text(returnedData.addresses[0].city);
+            $('#zip').text(returnedData.addresses[0].zipcode);
+            $('#phone').text(returnedData.phones[0].phoneNumber);
+            $('#cardno').text(returnedData.bills[0].creditCardNumber);
             $('#cvv').text("Cvv: " + returnedData.bills[0].cvv);
         });
 });
