@@ -39,28 +39,6 @@ $(document).ready(function () {
             $("#content").append(reviewsElementToAppend);
             }
         });
-
-     /*
-     $.ajax({
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                url: reviewResourceURI+id,
-                data: JSON.stringify(id),
-                dataType: 'json',
-                encode: true
-            }).done(function(returnedData){
-
-                if (!returnedData.productID) {
-                    alert("No Reviews Yet "+returnedData.productID);
-                    window.location='/home?id='+pid;                                        
-                } else {
-                    alert("Reviews found: "+returnedData.productID);
-                    
-                }
-            });  */
 });
 
 
