@@ -17,7 +17,7 @@ The project is a node project. For the UI, we used twitter bootstrap, jquery and
 4. To see the app in the browser use the url: "localhost:8090". The port number is 8090. 
 
 ## Team Contribution
-### Samuel:
+### Samuel
 + Server-side DAL, Domain and partly service layer
 + Client-side Javascript and Login
 + Operational Model Design
