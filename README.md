@@ -15,3 +15,19 @@ The project is a node project. For the UI, we used twitter bootstrap, jquery and
 2. Then do npm install to install all dependencies. 
 3. Finally, to run the app use the command "npm run start" on Git bash.
 4. To see the app in the browser use the url: "localhost:8090". The port number is 8090. 
+
+## Team Contribution
+### Samuel:
++ Server-side DAL, Domain and partly service layer
++ Client-side Javascript and Login
++ Operational Model Design
++ REST Service test using Postman
+### Nassurllah
++ Database Design (DDL and ERD)
++ Partly server-side service layer (including any changes in the DAL and domain layer)
++ Client side code web page design
++ REST Service test using Postman
+### Ibrahim
++ Prepared wiki and documentation
++ Prepared Presentation slides
++ Functional test on client-side
