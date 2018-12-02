@@ -6,7 +6,7 @@
 	<script src="/scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
 	<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<!--
 <<<<<<< HEAD
  
 <body>
@@ -31,14 +31,14 @@
                         </div>
                         <div class="col-md-8 col-6">
                             <p id="name"></p>
-=======
+=======    -->
 <body>
      <p class="greet" style="margin-left:130px;margin-bottom:-1px; margin-top:20px; font-weight: bold;"></p>
 	<div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="card">
-
+                    <a id="logout" href="/">Logout</a>
                     <div class="card-body">
                        
 
@@ -48,7 +48,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Your Profile</a>
                                     </li>
-                   
+                                
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
                                     <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
@@ -120,16 +120,25 @@
                                             </div>
                                         </div>
                                         <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Cvv</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                <p id="cvv"></p>
+                                            </div>
+                                        </div>
+                                        <hr />
 
 		                             
 		                              
                                         <form>
                                         <div class="form-group row">
 			                                <div class="col-sm-3">
-			                                	<!-- <a type="button" class="btn btn-primary btn-sm" href="/home">Back</a>
-			                                	<button class="btn btn-primary btn-sm" href="/home">back</button> -->
-			                                	<button onclick="location.href='/home'" type="button" class="btn btn-primary btn-sm">Back</button>
-			                                  <button name="submit" type="submit" class="btn btn-primary btn-sm">Update</button>
+			                                	<a type="button" class="btn btn-primary btn-sm" id="back" href="">Back</a>
+			                                	<!--<button class="btn btn-primary btn-sm" href="/home">back</button> -->
+			                                	<!--<button onclick="location.href='/home'" type="button" class="btn btn-primary btn-sm">Back</button>
+			                                  <button name="submit" type="submit" class="btn btn-primary btn-sm">Update</button> -->
 			                                </div>
 		                              </div>
 		                              </form>
@@ -139,6 +148,8 @@
                                     
                                 </div>
                             </div>
+
+ <!--                           
 >>>>>>> dff3f8457f159378ede2d2eb62eac61603460eaa
                         </div>
                     </div>
@@ -197,9 +208,9 @@
                         </div>
                     </div>
                     <hr />
-                    <p><a id="back" href="">back</a></p>
+                    <p><a id="back" href="">back</a></p>   -->
 			        <!--<p><a href="/update">Update</a></p>  -->
-			    </div>
+<!--			    </div>
             </div>
         </div>
 <<<<<<< HEAD
@@ -207,10 +218,7 @@
 
 </body>
 =======
-    </div>
+    </div>  -->
 </body>    
 
-
-
->>>>>>> dff3f8457f159378ede2d2eb62eac61603460eaa
 </html>

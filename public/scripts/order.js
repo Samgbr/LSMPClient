@@ -60,7 +60,7 @@ $(document).ready(function () {
 
             alert("Order Created");
             $('#submit').attr('disabled','disabled');
-            $('#orderID').text("OrderID: " + returnedData.orderID);
+            $('#orderID').text("Order Number: " + returnedData.orderID);
             $('#qty').text("Quantity: " + returnedData.orderDetails[0].orderedQuantity);
             orderid=returnedData.orderID;
             amount=price*returnedData.orderDetails[0].orderedQuantity;

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
+    <script src="/scripts/orders.js"></script>
+</head>
+<p><a id="logout" href="/">Logout</a></p>
+<p>Your Orders</p>
+
+<script id="orders-modal-template" type="text/x-handlebars-template">
+
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{profileID}}">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">{{orderDate}}</p>
+            <p class="card-text">{{orderDetails}}</p>
+          </div>
+        </div>
+      </div>
+
+    </script>
+
+    <script id="detail-modal-template" type="text/x-handlebars-template">
+
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item"">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">{{productID}}</p>
+            <p class="card-text">{{orderedQuantity}}</p>
+          </div>
+        </div>
+      </div>
+
+    </script>
+
+<div id="content">
+
+</div>
+<div id="detail">
+
+</div>
+<p><a id="back" href="">Back</a></p>
+</html>

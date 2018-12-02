@@ -23,6 +23,11 @@ $(document).ready(function () {
         $("#profile").attr("href", "/profile?id="+c);
     });
 
+     $( "#order" ).click(function() {
+        //add href when clicked with user id
+        $("#order").attr("href", "/orders?id="+c);
+    });
+
      $(".order").hide();
 
     $('form').submit(function (event) {

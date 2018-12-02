@@ -38,7 +38,7 @@ $(document).ready(function () {
             $('#zip').text(returnedData.addresses[0].zipcode);
             $('#phone').text(returnedData.phones[0].phoneNumber);
             $('#cardno').text(returnedData.bills[0].creditCardNumber);
-            $('#cvv').text("Cvv: " + returnedData.bills[0].cvv);
+            $('#cvv').text(returnedData.bills[0].cvv);
         });
 });
 
