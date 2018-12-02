@@ -18,6 +18,25 @@ $(document).ready(function () {
     $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
     });
+
+     $( "#cancel" ).click(function() {
+        /*
+        var customerResourceURI= "http://localhost:8082/Customer/shopperservice/shopper/";
+        $.ajax({
+            method: 'DELETE',
+            headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            url: customerResourceURI+loginid,
+            data: JSON.stringify(loginid),
+            dataType: 'json',
+            encode: true
+            }).done(function(returnedData){
+                alert("Customer Deleted");
+                //$("#cancel").attr("href", "/");
+        });  */
+    });
     
     var customerResourceURI= "http://localhost:8082/Customer/shopperservice/shopper/"
         $.ajax({

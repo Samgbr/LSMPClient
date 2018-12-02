@@ -29,8 +29,7 @@ $(document).ready(function () {
     });
 
      $(".order").hide();
-
-    $('form').submit(function (event) {
+            $('form').submit(function (event) {
                 event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
                 var bookResourceURI= "http://localhost:8082/BookProduct/bookservice/book/"
                 var url=bookResourceURI+getProductID()
@@ -45,12 +44,12 @@ $(document).ready(function () {
                     dataType: 'json',
                     encode: true
                 }).done(function(returnedData){
-
-                    //alert(resp);
+                    //alert(""+status);
 
                 });
                 myfunc(url);
             });
+        
 });
 
 function myfunc(url) {

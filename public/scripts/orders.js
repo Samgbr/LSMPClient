@@ -17,10 +17,6 @@ $(document).ready(function () {
 
     var orders_modal_template = Handlebars.compile(source);
 
-    var src = $("#detail-modal-template").html();
-
-    var detail_modal_template = Handlebars.compile(src);
-
      var ordersResourceURI= "http://localhost:8082/Order/orderservice/orders/"+id;
 
      $.getJSON(ordersResourceURI, function (orders) {
@@ -29,17 +25,10 @@ $(document).ready(function () {
                 var orderData = {
                     orderDate: ""+orders[i].orderDate,
                     amount: ""+orders[i].amount,
-                    orderDetails: ""+orders[i].orderDetails
+                    productID: ""+orders[i].orderDetails[0].productID,
+                    orderedQuantity: ""+orders[i].orderDetails[0].orderedQuantity
                 };
                 
-                for (var j = 0; j < orderData.orderDetails.length; j++) {
-                    var details=[{
-                        productID: ""+orderData.orderDetails[j].productID,
-                        orderedQuantity: ""+orderData.orderDetails[j].orderedQuantity
-                    }];
-                    var detailElementToAppend = detail_modal_template(details);
-                    $("#detail").append(detailElementToAppend);
-                }
                 //alert("Rate data: "+review[0].rating);
             var ordersElementToAppend = orders_modal_template(orderData);
 

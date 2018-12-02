@@ -33,6 +33,7 @@ $(document).ready(function () {
     });
 
     $('form').submit(function (event) {
+
         event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
         var orderDetail = [{
                 'productID': productid,
@@ -60,7 +61,7 @@ $(document).ready(function () {
 
             alert("Order Created");
             $('#submit').attr('disabled','disabled');
-            $('#orderID').text("Order Number: " + returnedData.orderID);
+            //$('#orderID').text("Order Number: " + returnedData.orderID);
             $('#qty').text("Quantity: " + returnedData.orderDetails[0].orderedQuantity);
             orderid=returnedData.orderID;
             amount=price*returnedData.orderDetails[0].orderedQuantity;

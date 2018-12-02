@@ -10,35 +10,23 @@
 
 <script id="orders-modal-template" type="text/x-handlebars-template">
 
-      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{profileID}}">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
           <div class="card-body">
-            <p class="card-text">{{orderDate}}</p>
-            <p class="card-text">{{orderDetails}}</p>
+            <p class="card-text">Orderdate: {{orderDate}}</p>
+            <p class="card-text">Amount paid: {{amount}}</p>
+            <p class="card-text">ProductID: {{productID}}</p>
+            <p class="card-text">Quantity ordered: {{orderedQuantity}}</p>
           </div>
         </div>
       </div>
 
     </script>
-
-    <script id="detail-modal-template" type="text/x-handlebars-template">
-
-      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item"">
-        <div class="card h-100">
-          <div class="card-body">
-            <p class="card-text">{{productID}}</p>
-            <p class="card-text">{{orderedQuantity}}</p>
-          </div>
-        </div>
-      </div>
-
-    </script>
+    
 
 <div id="content">
 
 </div>
-<div id="detail">
 
-</div>
 <p><a id="back" href="">Back</a></p>
 </html>
