@@ -33,6 +33,10 @@ app.get('/profile' ,function(req,res) {
 	res.render('profile');
 });
 
+app.get('/orders' ,function(req,res) {
+	res.render('orders');
+});
+
 app.get('/error' ,function(req,res) {
 	res.render('error');
 });

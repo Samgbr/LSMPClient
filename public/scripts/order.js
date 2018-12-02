@@ -1,4 +1,4 @@
-if(checkCookie() === "") {
+if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
@@ -16,7 +16,7 @@ console.log(id + " " +pid + " "+price);
 
 
 $(document).ready(function () {
-    $('#greet').text("Welcome " + checkCookie());
+    $('#greet').text("Welcome ");
      var profileid=id;
      var productid=pid;
      var link= "http://localhost:8082/Order/orderservice/order";
@@ -26,6 +26,12 @@ $(document).ready(function () {
      var orderid="";
      $('#pay').attr('disabled','disabled');
      $('#submit').removeAttr('disabled');
+     $("#back").attr("href", "/home?id="+id); 
+
+    $( "#logout" ).click(function() {
+        document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
+    });
+
     $('form').submit(function (event) {
         event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
         var orderDetail = [{
@@ -54,8 +60,8 @@ $(document).ready(function () {
 
             alert("Order Created");
             $('#submit').attr('disabled','disabled');
-            $('#orderID').text("OrderID: " + returnedData.orderID);
-            $('#qty').text("Qty: " + returnedData.orderDetails[0].orderedQuantity);
+            $('#orderID').text("Order Number: " + returnedData.orderID);
+            $('#qty').text("Quantity: " + returnedData.orderDetails[0].orderedQuantity);
             orderid=returnedData.orderID;
             amount=price*returnedData.orderDetails[0].orderedQuantity;
             $('#amount').text("Amount: "+price+" * "+returnedData.orderDetails[0].orderedQuantity+" = " + amount);
@@ -90,7 +96,7 @@ $(document).ready(function () {
             $('#amtpaid').text("Paid Amount: " + amount);
             $('#status').text("Status: Order Filled");
             $('#confirm').text("Confirmation id: "+orderid);
-            $('#pay').attr('disabled','disabled');           
+            $('#pay').attr('disabled','disabled');          
         });
     });
 
