@@ -1,4 +1,4 @@
-if(checkCookie() === "") {
+if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
@@ -15,8 +15,8 @@ var pid = url.searchParams.get("pid");
 console.log(link+ " "+ id+" "+pid);
 
 
-
 $(document).ready(function () {
+
     var source = $("#reviews-modal-template").html();
 
     var reviews_modal_template = Handlebars.compile(source);
@@ -39,6 +39,14 @@ $(document).ready(function () {
             $("#content").append(reviewsElementToAppend);
             }
         });
+     
+     $("#back").attr("href", "/home?id="+pid);
+
+     $( "#logout" ).click(function() {
+        document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
+    });
+
+
 });
 
 

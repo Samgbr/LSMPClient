@@ -1,20 +1,47 @@
 <html>
 	<title>PHome</title>
-	<head>Partner Home</head>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+    	<script src="/vendor/jquery/jquery.min.js"></script>
+    	<script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
+    	<script src="/scripts/phome.js"></script>
+    </head>
 	<body>
+		<p><a id="logout" href="/">Logout</a></p>
 		<p>Add Book</p>
-		<form>
-			<label>Book Name</label>
-			<input name="productName" type="text" id="pname" />
-			<label>Book Description</label>
-			<input name="description" type="text" id="description" />
+		<form id="frm">
+			<label>Book Title</label>
+			<input name="title" type="text" id="title" />
 			<label>Author</label>
 			<input name="author" type="text" id="author" />
 			<label>Publisher</label>
 			<input name="publisher" type="text" id="publisher" />
 			<label>Edition</label>
 			<input name="edition" type="text" id="edition" />
+			<label>Price</label>
+			<input name="price" type="text" id="price" />
 			<input type="submit" name="submit" placeholder="submit">
 		</form>
+
+		<script id="book-modal-template" type="text/x-handlebars-template">
+
+      	<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{id}}">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="card-title">
+              <a href="#">Title: {{title}}</a>
+            </h6>
+            <p class="card-text">Author: {{author}}</p>
+            <p class="card-text">Edition: {{edition}}</p>
+            <p class="card-text">Publisher: {{publisher}}</p>
+            <p class="card-text">Price: {{sellingPrice}}</p>
+          </div>
+        </div>
+      </div>
+
+     </script>
+     <div id="content">
+
+     </div>
 	</body>
 </html>

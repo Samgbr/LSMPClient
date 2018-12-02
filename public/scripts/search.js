@@ -1,4 +1,4 @@
-if(checkCookie() === "") {
+if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
@@ -12,7 +12,7 @@ console.log(c);
 
 $(document).ready(function () {
 
-     $(".greet").text("Welcome "+ checkCookie());
+     $(".greet").text("Welcome ");
 
     $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
      $( "#profile" ).click(function() {
         //add href when clicked with user id
-        $("#profile").attr("href", "/profile");
+        $("#profile").attr("href", "/profile?id="+c);
     });
 
      $(".order").hide();
@@ -96,7 +96,7 @@ function qtyOnHandfunc(invlink,price) {
                 if(qtyonhand>0) {
                     $(".orderInfo").hide();
                     $(".order").attr("href", "/Order?link="+inv+"&id="+c+"&pid="+getProductID()+"&price="+price);
-                    $(".order").text("Order");
+                    $(".order").text("Order Here...");
                     $(".order").show();
                 }
 

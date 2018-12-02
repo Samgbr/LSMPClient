@@ -1,16 +1,17 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="/scripts/reviews.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
+    <script src="/scripts/reviews.js"></script>
 </head>
 <p>Reviews</p>
+<p><a id="logout" href="/">Logout</a></p>
 
 <!-- a script for dynamically generating employees on the homepage. uses handlebard library. More info: https://handlebarsjs.com/ -->
     <script id="reviews-modal-template" type="text/x-handlebars-template">
 
-      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{employeeCardId}}">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{productID}}">
         <div class="card h-100">
           <div class="card-body">
             <p class="card-text">{{review}}</p>
@@ -24,4 +25,5 @@
 <div id="content">
 
 </div>
+<p><a id="back" href="">Back</a></p>
 </html>

@@ -1,4 +1,4 @@
-if(checkCookie() === "") {
+if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
@@ -14,6 +14,7 @@ var pid = url.searchParams.get("pid");
 
 
 console.log(link+ " "+id+ " "+pid);
+
 
 
 $(document).ready(function () {
@@ -33,7 +34,7 @@ $(document).ready(function () {
             }).done(function(returnedData){
 
                 if (!returnedData.profileID) {
-                    alert("Not Reviewed this Book"+returnedData.profileID );
+                    //alert("Not Reviewed this Book"+returnedData.profileID );
                     //submit the add product review form to the server
                         $('form').submit(function (event) {
 
@@ -67,10 +68,16 @@ $(document).ready(function () {
                         });
                                         
                 } else {
-                    alert("Already Reviewd: "+returnedData.profileID);
+                    alert("Already Reviewd: "+checkCookie());
                     window.location='/home?id='+returnedData.profileID;
                 }
             });
+
+    $("#back").attr("href", "/home?id="+pid);
+    $( "#logout" ).click(function() {
+        document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
+         event.stopPropagation();
+    });
 });
 
  function getReview() {

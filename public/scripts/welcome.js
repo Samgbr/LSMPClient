@@ -29,8 +29,8 @@ $(document).ready(function () {
                     window.location='/';
                     return;
                 }
-        
-                alert("login Successful" + "  " +returnedData.profileID);
+                setCookie("name",returnedData.profileID,30);
+                alert("login Successful" + "  " +returnedData.loginID);
                 window.location="/phome?id="+returnedData.profileID;
 
             });
@@ -54,7 +54,7 @@ $(document).ready(function () {
                     window.location='/';
                     return;
                 }
-                setCookie("name",returnedData.loginID,30);
+                setCookie("name",returnedData.profileID,30);
                 alert("login Successful" + "  " +returnedData.loginID);
                 window.location="/home?id="+returnedData.profileID;
 
