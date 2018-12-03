@@ -27,14 +27,15 @@ $(document).ready(function () {
 
         for (var i = 0; i < review.length; i++) {
                 var reviewData = {
+                    productReviewID: ""+review[i].productReviewID,
                     productID: ""+review[i].productID,
                     profileID: ""+review[i].profileID,
                     review: ""+review[i].review,
-                    rate: ""+review[i].rating
+                    rate: ""+review[i].rating,
+                    delete: ""+review[i].link[1].url
                 };
                 //alert("Rate data: "+review[0].rating);
             var reviewsElementToAppend = reviews_modal_template(reviewData);
-
             //embed the html element which contains employee information into the html div tag with id 'content'
             $("#content").append(reviewsElementToAppend);
             }
