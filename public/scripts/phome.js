@@ -27,6 +27,7 @@ $(document).ready(function () {
                         'publisher': getPublisher(),
                         'edition': getEdition(),
                         'sellingPrice': getSellingprice(),
+                        
                         'partnerID':id
                     };
 

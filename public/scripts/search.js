@@ -32,7 +32,7 @@ $(document).ready(function () {
             $('form').submit(function (event) {
                 event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
                 var bookResourceURI= "http://localhost:8082/BookProduct/bookservice/book/"
-                var url=bookResourceURI+getProductID()
+                var url=bookResourceURI+getProductID();
                 $.ajax({
                     method: 'GET',
                     headers: {
@@ -44,8 +44,7 @@ $(document).ready(function () {
                     dataType: 'json',
                     encode: true
                 }).done(function(returnedData){
-                    //alert(""+status);
-
+                    //alert(""+returnedData.link[0].url);
                 });
                 myfunc(url);
             });

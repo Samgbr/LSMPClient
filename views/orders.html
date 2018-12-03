@@ -4,29 +4,37 @@
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
     <script src="/scripts/orders.js"></script>
+    <style type="text/css">
+      body{
+        background-image: url(/images/img4.jpg);
+      }
+    </style>
 </head>
-<p><a id="logout" href="/">Logout</a></p>
-<p>Your Orders</p>
+<div class="content" style="margin-left: 100px; margin-right: 300px;">
+  <h3><a id="logout" href="/">Logout</a></h3>
+  <h3><b>Your Orders</b></h3>
+  <hr>
+  <script id="orders-modal-template" type="text/x-handlebars-template">
 
-<script id="orders-modal-template" type="text/x-handlebars-template">
-
-      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <div class="card-body">
-            <p class="card-text">Orderdate: {{orderDate}}</p>
-            <p class="card-text">Amount paid: {{amount}}</p>
-            <p class="card-text">ProductID: {{productID}}</p>
-            <p class="card-text">Quantity ordered: {{orderedQuantity}}</p>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text"><b>Orderdate: {{orderDate}}</b></p>
+              <p class="card-text"><b>Amount paid: {{amount}}</b></p>
+              <p class="card-text"><b>ProductID: {{productID}}</b></p>
+              <p class="card-text"><b>Quantity ordered: {{orderedQuantity}}</b></p>
+              <hr>
+            </div>
           </div>
         </div>
-      </div>
 
-    </script>
-    
+      </script>
+      
 
-<div id="content">
+  <div id="content">
 
+  </div>
+
+  <h3><a id="back" href="">Back</a></h3>
 </div>
-
-<p><a id="back" href="">Back</a></p>
 </html>

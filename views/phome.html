@@ -1,32 +1,59 @@
 <html>
 	<title>PHome</title>
 	<head>
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
     	<script src="/vendor/jquery/jquery.min.js"></script>
+    	<script src="/scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
     	<script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
     	<script src="/scripts/phome.js"></script>
     </head>
 	<body>
-		<p><a id="logout" href="/">Logout</a></p>
-		<p>Add Book</p>
-		<form id="frm">
-			<label>Book Title</label>
-			<input name="title" type="text" id="title" />
-			<label>Author</label>
-			<input name="author" type="text" id="author" />
-			<label>Publisher</label>
-			<input name="publisher" type="text" id="publisher" />
-			<label>Edition</label>
-			<input name="edition" type="text" id="edition" />
-			<label>Price</label>
-			<input name="price" type="text" id="price" />
-			<input type="submit" name="submit" placeholder="submit">
-		</form>
-
+		<p><a id="logout" href="/" class="text-right" style="margin-left: 100px;">Logout</a></p>
+		<p style="margin-left: 100px;">Welcome</p>
+		<div class="panel panel-primary" style="margin:20px;">
+		<div class="panel-heading">
+	        <h4 class="panel-title" style="margin-left: 50px;">Add Book Form</h4>
+		</div>
+		<div class="panel-body">
+			<form id="frm">
+				<div class="col-md-12 col-sm-12">
+					<div class="row" style="margin-left: 20px;">
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Book Title</label>
+							<input name="title" type="text" id="title" class="form-control input-sm"/>
+						</div>
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Author</label>
+							<input name="author" type="text" id="author" class="form-control input-sm"/>
+						</div>
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Publisher</label>
+							<input name="publisher" type="text" id="publisher" class="form-control input-sm"/>
+						</div>
+					</div>
+					<div class="row" style="margin-left: 20px;">
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Edition</label>
+							<input name="edition" type="text" id="edition" class="form-control input-sm"/>
+						</div>
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Price</label>
+							<input name="price" type="text" id="price" class="form-control input-sm"/>
+						</div>
+						<div class="form-group col-md-4 col-sm-4">
+							<p></p>
+							<input type="submit" name="submit" placeholder="submit">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		</div>
 		<script id="book-modal-template" type="text/x-handlebars-template">
 
       	<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{id}}">
-        <div class="card h-100">
+      	<div class="card h-100">
           <div class="card-body">
             <h6 class="card-title">
               <a href="#">Title: {{title}}</a>
@@ -36,8 +63,8 @@
             <p class="card-text">Publisher: {{publisher}}</p>
             <p class="card-text">Price: {{sellingPrice}}</p>
           </div>
-        </div>
-      </div>
+       </div>
+       </div> 
 
      </script>
      <div id="content">
