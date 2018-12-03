@@ -102,7 +102,7 @@ function qtyOnHandfunc(invlink,price) {
                     $(".order").text("Order Here...");
                     $(".order").show();
                 }
-
+                $('#productID').val('');
         });
     
 }

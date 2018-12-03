@@ -7,45 +7,47 @@
     	<script src="/scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
     	<script src="/scripts/handlebars-v4.0.12.js"></script>	<!-- handlebar library -->
     	<script src="/scripts/phome.js"></script>
+    	<style type="text/css">
+			body{
+				background-image: url(/images/img.png);
+			}
+	</style>
     </head>
 	<body>
 		<p><a id="logout" href="/" class="text-right" style="margin-left: 100px;">Logout</a></p>
-		<p style="margin-left: 100px;">Welcome</p>
-		<div class="panel panel-primary" style="margin:20px;">
+		<p style="margin-left: 100px;">Welcome Partner</p>
+		<div class="panel panel-primary" style="margin-left:50px;">
 		<div class="panel-heading">
-	        <h4 class="panel-title" style="margin-left: 50px;">Add Book Form</h4>
+	        <h4 class="panel-title" style="margin-left: 50px;">Add a book you want to sale</h4>
 		</div>
 		<div class="panel-body">
 			<form id="frm">
 				<div class="col-md-12 col-sm-12">
 					<div class="row" style="margin-left: 20px;">
-						<div class="form-group col-md-4 col-sm-4">
+						<div class="form-group col-md-3 col-sm-3">
 							<label>Book Title</label>
 							<input name="title" type="text" id="title" class="form-control input-sm"/>
 						</div>
-						<div class="form-group col-md-4 col-sm-4">
+						<div class="form-group col-md-3 col-sm-3">
 							<label>Author</label>
 							<input name="author" type="text" id="author" class="form-control input-sm"/>
 						</div>
-						<div class="form-group col-md-4 col-sm-4">
+						<div class="form-group col-md-3 col-sm-3">
 							<label>Publisher</label>
 							<input name="publisher" type="text" id="publisher" class="form-control input-sm"/>
 						</div>
 					</div>
 					<div class="row" style="margin-left: 20px;">
-						<div class="form-group col-md-4 col-sm-4">
+						<div class="form-group col-md-3 col-sm-3">
 							<label>Edition</label>
 							<input name="edition" type="text" id="edition" class="form-control input-sm"/>
 						</div>
-						<div class="form-group col-md-4 col-sm-4">
+						<div class="form-group col-md-3 col-sm-3">
 							<label>Price</label>
 							<input name="price" type="text" id="price" class="form-control input-sm"/>
 						</div>
-						<div class="form-group col-md-4 col-sm-4">
-							<p></p>
-							<input type="submit" name="submit" placeholder="submit">
-						</div>
 					</div>
+					<input type="submit" name="submit" placeholder="submit" style="margin-left: 35px;">
 				</div>
 			</form>
 		</div>
@@ -53,7 +55,7 @@
 		<script id="book-modal-template" type="text/x-handlebars-template">
 
       	<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="{{id}}">
-      	<div class="card h-100">
+      	<div class="card">
           <div class="card-body">
             <h6 class="card-title">
               <a href="#">Title: {{title}}</a>
@@ -67,7 +69,7 @@
        </div> 
 
      </script>
-     <div id="content">
+     <div id="content" style="margin-left: 80px;">
 
      </div>
 	</body>
