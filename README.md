@@ -32,5 +32,5 @@ The project is a node project. For the UI, we used twitter bootstrap, jquery and
 + Prepared Presentation slides
 + Functional test on client-side
 
-+ Database Design
+### Database Design
 https://drive.google.com/open?id=1WBThew1vK6jpfr8Kbx-b8Dkf7feg9AgK
