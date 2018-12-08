@@ -2,14 +2,6 @@ if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var id = url.searchParams.get("id");
-
-console.log(" "+ id);
-
 
 $(document).ready(function () {
 
@@ -17,7 +9,7 @@ $(document).ready(function () {
 
     var orders_modal_template = Handlebars.compile(source);
 
-     var ordersResourceURI= "http://localhost:8082/Order/orderservice/orders/"+id;
+     var ordersResourceURI= "http://localhost:8082/Order/orderservice/orders/"+getCookie("name");
 
      $.getJSON(ordersResourceURI, function (orders) {
 
@@ -37,7 +29,7 @@ $(document).ready(function () {
             }
         });
      
-     $("#back").attr("href", "/home?id="+id);
+     $("#back").attr("href", "/home");
 
      $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";

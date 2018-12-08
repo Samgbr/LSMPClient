@@ -2,18 +2,6 @@ if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var link = url.searchParams.get("link");
-
-var id = url.searchParams.get("id");
-
-var pid = url.searchParams.get("pid");
-
-console.log(link+ " "+ id+" "+pid);
-
 
 $(document).ready(function () {
 
@@ -21,9 +9,7 @@ $(document).ready(function () {
 
     var reviews_modal_template = Handlebars.compile(source);
 
-     var reviewResourceURI= "http://localhost:8082/ProductReview/productreviewservice/productreviews/"+id;
-
-     $.getJSON(reviewResourceURI, function (review) {
+     $.getJSON(getCookie("reviewslink"), function (review) {
 
         for (var i = 0; i < review.length; i++) {
                 var reviewData = {
@@ -41,7 +27,7 @@ $(document).ready(function () {
             }
         });
      
-     $("#back").attr("href", "/home?id="+pid);
+     $("#back").attr("href", "/home");
 
      $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";

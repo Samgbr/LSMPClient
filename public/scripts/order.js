@@ -2,31 +2,18 @@ if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var id = url.searchParams.get("id");
-
-var pid = url.searchParams.get("pid");
-
-var price = url.searchParams.get("price");
-
-console.log(id + " " +pid + " "+price);
-
 
 $(document).ready(function () {
     $('#greet').text("Welcome ");
-     var profileid=id;
-     var productid=pid;
-     var link= "http://localhost:8082/Order/orderservice/order";
+    
      var d=new Date();
      var datenow = d.toLocaleDateString();
      var amount=0;
      var orderid="";
+     var paymentLink=""; 
      $('#pay').attr('disabled','disabled');
      $('#submit').removeAttr('disabled');
-     $("#back").attr("href", "/home?id="+id); 
+     $("#back").attr("href", "/home"); 
 
     $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
@@ -36,12 +23,12 @@ $(document).ready(function () {
 
         event.preventDefault(); // waits for a response from server before proceeding with the rest of the code
         var orderDetail = [{
-                'productID': productid,
+                'productID': getCookie("productid"),
                 'orderedQuantity': getQty()
         }];
 
         var data = {
-                'profileID': profileid,
+                'profileID': getCookie("name"),
                 'orderDate': datenow,
                 'shipAddressID': "AD9505",
                 'orderDetails': orderDetail
@@ -53,7 +40,7 @@ $(document).ready(function () {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            url: link,
+            url: getCookie("order"),
             data: JSON.stringify(data),
             dataType: 'json',
             encode: true
@@ -64,16 +51,15 @@ $(document).ready(function () {
             //$('#orderID').text("Order Number: " + returnedData.orderID);
             $('#qty').text("Quantity: " + returnedData.orderDetails[0].orderedQuantity);
             orderid=returnedData.orderID;
-            amount=price*returnedData.orderDetails[0].orderedQuantity;
-            $('#amount').text("Amount: "+price+" * "+returnedData.orderDetails[0].orderedQuantity+" = " + amount);
+            amount=getCookie("price")*returnedData.orderDetails[0].orderedQuantity;
+            $('#amount').text("Amount: "+getCookie("price")+" * "+returnedData.orderDetails[0].orderedQuantity+" = " + amount);
              $('#pay').removeAttr('disabled');
+             paymentLink=returnedData.link[0].url;
         });
 
     });
 
     $( "#pay" ).click(function() {
-        //alert( "button called" + amount+ " "+ orderid);
-        link="http://localhost:8082/Order/orderservice/payment";
 
         var data = {
             'orderID': orderid,
@@ -87,7 +73,7 @@ $(document).ready(function () {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            url: link,
+            url: paymentLink,
             data: JSON.stringify(data),
             dataType: 'json',
             encode: true

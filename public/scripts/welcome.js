@@ -30,8 +30,10 @@ $(document).ready(function () {
                     return;
                 }
                 setCookie("name",returnedData.profileID,30);
+                setCookie("login",returnedData.loginID,30);
                 alert("login Successful" + "  " +returnedData.loginID);
-                window.location="/phome?id="+returnedData.profileID;
+                //set cookie
+                window.location="/phome";
 
             });
         } else {
@@ -56,7 +58,7 @@ $(document).ready(function () {
                 }
                 setCookie("name",returnedData.profileID,30);
                 alert("login Successful" + "  " +returnedData.loginID);
-                window.location="/home?id="+returnedData.profileID;
+                window.location="/home";
 
             });
         }

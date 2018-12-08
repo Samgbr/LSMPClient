@@ -2,15 +2,6 @@ if(checkCookie().includes("SH")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var id = url.searchParams.get("id");
-
-
-console.log("id "+id);
-
 
 
 $(document).ready(function () {
@@ -28,7 +19,7 @@ $(document).ready(function () {
                         'edition': getEdition(),
                         'sellingPrice': getSellingprice(),
                         
-                        'partnerID':id
+                        'partnerID':getCookie("name")
                     };
 
                     $.ajax({
@@ -51,7 +42,18 @@ $(document).ready(function () {
 
                                 var source = $("#book-modal-template").html();
                                 var book_modal_template = Handlebars.compile(source);
-                                var bookElementToAppend = book_modal_template(returnedData);
+
+                                 var bookData = {
+                                    title: ""+returnedData.title,
+                                    author: ""+returnedData.author,
+                                    edition: ""+returnedData.edition,
+                                    publisher: ""+returnedData.publisher,
+                                    price: ""+returnedData.sellingPrice,
+                                    updatelink: returnedData.link[3].url,
+                                    deletelink: returnedData.link[4].url,
+                                };
+
+                                var bookElementToAppend = book_modal_template(bookData);
                                 //embed the html element which contains employee information into the html div tag with id 'content'
                                 $("#content").append(bookElementToAppend);
 
@@ -65,6 +67,47 @@ $(document).ready(function () {
     $( "#logout" ).click(function() {
         document.cookie = "pname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
     });
+
+       //Delete Profile
+     $( "#delete" ).click(function() {
+        alert($('#delete').val());
+        /*
+        $.ajax({
+            method: 'DELETE',
+            headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            url: deleteLink,
+            data: JSON.stringify(loginid),
+            dataType: 'json',
+            encode: true
+            }).done(function(returnedData){
+                alert("Customer Deleted");
+                window.location="/";
+        });   */
+    });
+
+      $( "#update" ).click(function() {
+        alert($('#update').val());
+        //Payload goes here...
+        /*
+        $.ajax({
+            method: 'PUT',
+            headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            url: updateLink,
+            data: JSON.stringify(loginid),
+            dataType: 'json',
+            encode: true
+            }).done(function(returnedData){
+                alert("Customer Deleted");
+                window.location="/";
+        });   */
+        });
+
 });
 
  function getTitle() {

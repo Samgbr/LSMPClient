@@ -2,40 +2,17 @@ if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var c = url.searchParams.get("id");
-
-
 
 $(document).ready(function () {
+
+    var deleteLink="";
+    var updateLink="";
     var loginid=checkCookie();
     $(".greet").text("Welcome: ");
-    $("#back").attr("href", "/home?id="+c);
+    $("#back").attr("href", "/home");
 
     $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
-    });
-
-     $( "#cancel" ).click(function() {
-        /*
-        var customerResourceURI= "http://localhost:8082/Customer/shopperservice/shopper/";
-        $.ajax({
-            method: 'DELETE',
-            headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-            url: customerResourceURI+loginid,
-            data: JSON.stringify(loginid),
-            dataType: 'json',
-            encode: true
-            }).done(function(returnedData){
-                alert("Customer Deleted");
-                //$("#cancel").attr("href", "/");
-        });  */
     });
     
     var customerResourceURI= "http://localhost:8082/Customer/shopperservice/shopper/"
@@ -58,7 +35,50 @@ $(document).ready(function () {
             $('#phone').text(returnedData.phones[0].phoneNumber);
             $('#cardno').text(returnedData.bills[0].creditCardNumber);
             $('#cvv').text(returnedData.bills[0].cvv);
+            deleteLink=returnedData.link[1].url;
+            updateLink=returnedData.link[0].url;
+
         });
+
+        //Delete Profile
+     $( "#cancel" ).click(function() {
+        //alert(deleteLink);
+        /*
+        $.ajax({
+            method: 'DELETE',
+            headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            url: deleteLink,
+            data: JSON.stringify(loginid),
+            dataType: 'json',
+            encode: true
+            }).done(function(returnedData){
+                alert("Customer Deleted");
+                window.location="/";
+        });   */
+    });
+
+      $( "#update" ).click(function() {
+        //alert(updateLink);
+        //Payload goes here...
+        /*
+        $.ajax({
+            method: 'PUT',
+            headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            url: updateLink,
+            data: JSON.stringify(loginid),
+            dataType: 'json',
+            encode: true
+            }).done(function(returnedData){
+                alert("Customer Deleted");
+                window.location="/";
+        });   */
+    });
 });
 
 

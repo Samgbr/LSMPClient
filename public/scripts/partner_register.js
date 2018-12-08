@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    var shopperResourceURI= "http://localhost:8082/Partner/partnerservice/partner"
+    var partnerResourceURI= "http://localhost:8082/Partner/partnerservice/partner"
 
 
     //submit the add shopper form to the server
@@ -47,7 +47,7 @@ $(document).ready(function () {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            url: shopperResourceURI,
+            url: partnerResourceURI,
             data: JSON.stringify(formData),
             dataType: 'json',
             encode: true
