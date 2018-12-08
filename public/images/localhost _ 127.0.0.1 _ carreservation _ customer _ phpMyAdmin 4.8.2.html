@@ -1,0 +1,1572 @@
+<!DOCTYPE HTML><html lang='en' dir='ltr'><head><meta charset="utf-8" /><meta name="referrer" content="no-referrer" /><meta name="robots" content="noindex,nofollow" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0"><style id="cfs-style">html{display: none;}</style><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="./themes/pmahomme/jquery/jquery-ui.css" /><link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=4.8.2" /><link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=4.8.2" /><link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=4.8.2" /><link rel="stylesheet" type="text/css" href="phpmyadmin.css.php?nocache=6138657353ltr&amp;server=1" /><link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=4.8.2" media="print" id="printcss"/><title>localhost / 127.0.0.1 / carreservation / customer | phpMyAdmin 4.8.2</title><script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-migrate.js?v=4.8.2"></script>
+<script data-cfasync='false' type='text/javascript' src='js/whitelist.php?v=4.8.2'></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/sprintf.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/ajax.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/keyhandler.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-ui.min.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/js.cookie.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.mousewheel.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.event.drag-2.2.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.validate.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-ui-timepicker-addon.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.ba-hashchange-1.3.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.debounce-1.0.5.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/menu-resizer.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/cross_framing_protection.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/rte.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/tracekit.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/error_report.js?v=4.8.2"></script>
+<script data-cfasync='false' type='text/javascript' src='js/messages.php?l=en&amp;v=4.8.2'></script>
+<script data-cfasync="false" type="text/javascript" src="js/config.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/doclinks.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/functions.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/navigation.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/indexes.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/common.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/page_settings.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/shortcuts_handler.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/makegrid.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.uitablefilter.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/sql.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/lib/codemirror.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/mode/sql/sql.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/runmode/runmode.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/hint/show-hint.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/hint/sql-hint.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/lint/lint.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/codemirror/addon/lint/sql-lint.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript" src="js/console.js?v=4.8.2"></script>
+<script data-cfasync="false" type="text/javascript">// <![CDATA[
+PMA_commonParams.setAll({common_query:"",opendb_url:"db_structure.php",lang:"en",server:"1",table:"customer",db:"carreservation",token:"o%fnZVk*2T-u7<r",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Browse",pma_text_left_default_tab:"Structure",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"4.8.2",auth_type:"cookie",user:"User1"});
+ConsoleEnterExecutes=false
+AJAX.scriptHandler.add("vendor/jquery/jquery.min.js",0).add("vendor/jquery/jquery-migrate.js",0).add("whitelist.php",1).add("vendor/sprintf.js",1).add("ajax.js",0).add("keyhandler.js",1).add("vendor/jquery/jquery-ui.min.js",0).add("vendor/js.cookie.js",1).add("vendor/jquery/jquery.mousewheel.js",0).add("vendor/jquery/jquery.event.drag-2.2.js",0).add("vendor/jquery/jquery.validate.js",0).add("vendor/jquery/jquery-ui-timepicker-addon.js",0).add("vendor/jquery/jquery.ba-hashchange-1.3.js",0).add("vendor/jquery/jquery.debounce-1.0.5.js",0).add("menu-resizer.js",1).add("cross_framing_protection.js",0).add("rte.js",1).add("vendor/tracekit.js",1).add("error_report.js",1).add("messages.php",0).add("config.js",1).add("doclinks.js",1).add("functions.js",1).add("navigation.js",1).add("indexes.js",1).add("common.js",1).add("page_settings.js",1).add("shortcuts_handler.js",1).add("makegrid.js",1).add("vendor/jquery/jquery.uitablefilter.js",0).add("sql.js",1).add("vendor/codemirror/lib/codemirror.js",0).add("vendor/codemirror/mode/sql/sql.js",0).add("vendor/codemirror/addon/runmode/runmode.js",0).add("vendor/codemirror/addon/hint/show-hint.js",0).add("vendor/codemirror/addon/hint/sql-hint.js",0).add("vendor/codemirror/addon/lint/lint.js",0).add("codemirror/addon/lint/sql-lint.js",0).add("console.js",1);
+$(function() {AJAX.fireOnload("whitelist.php");AJAX.fireOnload("vendor/sprintf.js");AJAX.fireOnload("keyhandler.js");AJAX.fireOnload("vendor/js.cookie.js");AJAX.fireOnload("menu-resizer.js");AJAX.fireOnload("rte.js");AJAX.fireOnload("vendor/tracekit.js");AJAX.fireOnload("error_report.js");AJAX.fireOnload("config.js");AJAX.fireOnload("doclinks.js");AJAX.fireOnload("functions.js");AJAX.fireOnload("navigation.js");AJAX.fireOnload("indexes.js");AJAX.fireOnload("common.js");AJAX.fireOnload("page_settings.js");AJAX.fireOnload("shortcuts_handler.js");AJAX.fireOnload("makegrid.js");AJAX.fireOnload("sql.js");AJAX.fireOnload("console.js");});
+// ]]></script><noscript><style>html{display:block}</style></noscript></head><body><div id="pma_navigation"><div id="pma_navigation_resizer"></div><div id="pma_navigation_collapser"></div><div id="pma_navigation_content"><div id="pma_navigation_header"><a class="hide navigation_url" href="navigation.php?ajax_request=1"></a>    <div id="pmalogo">
+                    <a href="index.php" >
+                <img src="./themes/pmahomme/img/logo_left.png" alt="phpMyAdmin" id="imgpmalogo" />
+                    </a>
+            </div>
+<!-- LINKS START --><div id="navipanellinks"><a href="index.php" title="Home"><img src="themes/dot.gif" title="Home" alt="Home" class="icon ic_b_home" /></a><a href="logout.php?db=carreservation&amp;table=customer&amp;goto=tbl_sql.php&amp;back=tbl_sql.php" class="logout disableAjax" title="Log out"><img src="themes/dot.gif" title="Log out" alt="Log out" class="icon ic_s_loggoff" /></a><a href="./doc/html/index.html" target="documentation" title="phpMyAdmin documentation"><img src="themes/dot.gif" title="phpMyAdmin documentation" alt="phpMyAdmin documentation" class="icon ic_b_docs" /></a><a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Findex.html" target="mysql_doc" title="Documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_sqlhelp" /></a><a href="#" id="pma_navigation_settings_icon" title="Navigation panel settings"><img src="themes/dot.gif" title="Navigation panel settings" alt="Navigation panel settings" class="icon ic_s_cog" /></a><a href="#" id="pma_navigation_reload" title="Reload navigation panel"><img src="themes/dot.gif" title="Reload navigation panel" alt="Reload navigation panel" class="icon ic_s_reload" /></a></div><!-- LINKS ENDS --><img src="themes/dot.gif" title="Loading…" alt="Loading…" style="visibility: hidden; display:none" class="icon ic_ajax_clock_small throbber" /></div><div id="pma_navigation_tree" class="list_container synced highlight"><div class="pma_quick_warp"><div class="drop_list"><span title="Recent tables" class="drop_button">Recent</span><ul id="pma_recent_list"><li class="warp_link">There are no recent tables.</li></ul></div><div class="drop_list"><span title="Favorite tables" class="drop_button">Favorites</span><ul id="pma_favorite_list"><li class="warp_link">There are no favorite tables.</li></ul></div><div class="clearfloat"></div></div><div class="clearfloat"></div><ul><!-- CONTROLS START --><li id="navigation_controls_outer"><div id="navigation_controls"><a href="#" id="pma_navigation_collapse" title="Collapse all"><img src="themes/dot.gif" title="Collapse all" alt="Collapse all" class="icon ic_s_collapseall" /></a><a href="#" id="pma_navigation_sync" title="Unlink from main panel"><img src="themes/dot.gif" title="Unlink from main panel" alt="Unlink from main panel" class="icon ic_s_link" /></a></div></li><!-- CONTROLS ENDS --></ul><div id='pma_navigation_tree_content'><ul><li class="first new_database italics"><div class='block'><i class='first'></i></div><div class='block '><a href='server_databases.php?server=1'><img src="themes/dot.gif" title="" alt="" class="icon ic_b_newdb" /></a></div><a class='hover_show_full' href='server_databases.php?server=1' title=''>New</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.Y2FycmVzZXJ2YXRpb24=</span><span class='hide vPath'>cm9vdA==.Y2FycmVzZXJ2YXRpb24=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=carreservation&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=carreservation' title='Structure'>carreservation</a><span class="dbItemControls"><a href="navigation.php?showUnhideDialog=1&amp;dbName=carreservation" class="showUnhide ajax"><img src="themes/dot.gif" title="Show hidden items" alt="Show hidden items" class="icon ic_show" /></a></span><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.Y29tcGFueQ==</span><span class='hide vPath'>cm9vdA==.Y29tcGFueQ==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=company&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=company' title='Structure'>company</a><span class="dbItemControls"><a href="navigation.php?showUnhideDialog=1&amp;dbName=company" class="showUnhide ajax"><img src="themes/dot.gif" title="Show hidden items" alt="Show hidden items" class="icon ic_show" /></a></span><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class='hide vPath'>cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=information_schema&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=information_schema' title='Structure'>information_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.bXlzcWw=</span><span class='hide vPath'>cm9vdA==.bXlzcWw=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=mysql&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=mysql' title='Structure'>mysql</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class='hide vPath'>cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=performance_schema&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=performance_schema' title='Structure'>performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.cGhwbXlhZG1pbg==</span><span class='hide vPath'>cm9vdA==.cGhwbXlhZG1pbg==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=phpmyadmin&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=phpmyadmin' title='Structure'>phpmyadmin</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.cGluZXZhbGxleQ==</span><span class='hide vPath'>cm9vdA==.cGluZXZhbGxleQ==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=pinevalley&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=pinevalley' title='Structure'>pinevalley</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.c3R1ZGVudF9yZWdpc3RyYXRpb24=</span><span class='hide vPath'>cm9vdA==.c3R1ZGVudF9yZWdpc3RyYXRpb24=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=student_registration&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=student_registration' title='Structure'>student_registration</a><span class="dbItemControls"><a href="navigation.php?showUnhideDialog=1&amp;dbName=student_registration" class="showUnhide ajax"><img src="themes/dot.gif" title="Show hidden items" alt="Show hidden items" class="icon ic_show" /></a></span><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.dGVzdA==</span><span class='hide vPath'>cm9vdA==.dGVzdA==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=test&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=test' title='Structure'>test</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.dW5pdmVyc2l0eQ==</span><span class='hide vPath'>cm9vdA==.dW5pdmVyc2l0eQ==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=university&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=university' title='Structure'>university</a><div class="clearfloat"></div></li><li class="last navGroup"><div class='block'><i></i><a class="expander loaded container" href='#'><span class='hide aPath'>cm9vdA==</span><span class='hide vPath'>cm9vdA==.dXNlcjE=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><i><div class='block '><u><img src="themes/dot.gif" title="" alt="" class="icon ic_b_group" /></u></div>&nbsp;user1</i><div class="clearfloat"></div><div style='display: none;' class='list_container'><ul><li class="database database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.dXNlcjE=</span><span class='hide vPath'>cm9vdA==.dXNlcjE=.</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=user1&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=user1' title='Structure'>user1</a><div class="clearfloat"></div></li><li class="database last database"><div class='block'><i></i><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.dXNlcjFfdGVzdDE=</span><span class='hide vPath'>cm9vdA==.dXNlcjE=.dGVzdDE=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=user1_test1&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=user1_test1' title='Structure'>user1_test1</a><div class="clearfloat"></div></li></ul></div></li></ul></div></div><div id="pma_navi_settings_container"><div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="tbl_sql.php?db=carreservation&amp;table=customer&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value="" /><input type="hidden" name="token" value="o%fnZVk*2T-u7&lt;r" />
+<input type="hidden" name="submit_save" value="Navi" /><input type="hidden" name="token" value="o%fnZVk*2T-u7&lt;r" /><ul class="tabs responsivetable">
+
+                                    <li>
+
+            <a href="#Navi_panel">
+            Navigation panel
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_tree">
+            Navigation tree
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_servers">
+            Servers
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_databases">
+            Databases
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_tables">
+            Tables
+            </a>
+        </li>
+            </ul>
+<br /><div class="tabs_contents"><fieldset class="optbox" id="Navi_panel">
+<legend>Navigation panel</legend>
+    <p>Customize appearance of the navigation panel.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="ShowDatabasesNavigationAsTree">Show databases navigation as tree</label><span class="doc"><a href="./doc/html/config.html#cfg_ShowDatabasesNavigationAsTree" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>In the navigation panel, replaces the database tree with a selector</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDatabasesNavigationAsTree" id="ShowDatabasesNavigationAsTree" checked="checked" /></span><a class="restore-default hide" href="#ShowDatabasesNavigationAsTree" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationLinkWithMainPanel">Link with main panel</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationLinkWithMainPanel" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Link with main panel by highlighting the current database or table.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationLinkWithMainPanel" id="NavigationLinkWithMainPanel" checked="checked" /></span><a class="restore-default hide" href="#NavigationLinkWithMainPanel" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationDisplayLogo">Display logo</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationDisplayLogo" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Show logo in navigation panel.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayLogo" id="NavigationDisplayLogo" checked="checked" /></span><a class="restore-default hide" href="#NavigationDisplayLogo" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationLogoLink">Logo link URL</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationLogoLink" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>URL where logo in the navigation panel will point to.</small></th><td><input type="text" class="all85" name="NavigationLogoLink" id="NavigationLogoLink" value="index.php" /><a class="restore-default hide" href="#NavigationLogoLink" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationLogoLinkWindow">Logo link target</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationLogoLinkWindow" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Open the linked page in the main window (<kbd>main</kbd>) or in a new one (<kbd>new</kbd>).</small></th><td><select class="all85" name="NavigationLogoLinkWindow" id="NavigationLogoLinkWindow"><option value="main" selected="selected">main</option><option value="new">new</option></select><a class="restore-default hide" href="#NavigationLogoLinkWindow" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreePointerEnable">Enable highlighting</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreePointerEnable" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Highlight server under the mouse cursor.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreePointerEnable" id="NavigationTreePointerEnable" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreePointerEnable" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="FirstLevelNavigationItems">Maximum items on first level</label><span class="doc"><a href="./doc/html/config.html#cfg_FirstLevelNavigationItems" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>The number of items that can be displayed on each page on the first level of the navigation tree.</small></th><td><input type="number" name="FirstLevelNavigationItems" id="FirstLevelNavigationItems" value="100" /><a class="restore-default hide" href="#FirstLevelNavigationItems" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeDisplayItemFilterMinimum">Minimum number of items to display the filter box</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDisplayItemFilterMinimum" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Defines the minimum number of items (tables, views, routines and events) to display a filter box.</small></th><td><input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30" /><a class="restore-default hide" href="#NavigationTreeDisplayItemFilterMinimum" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NumRecentTables">Recently used tables</label><span class="doc"><a href="./doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Maximum number of recently used tables; set 0 to disable.</small></th><td><input type="number" name="NumRecentTables" id="NumRecentTables" value="10" /><a class="restore-default hide" href="#NumRecentTables" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NumFavoriteTables">Favorite tables</label><span class="doc"><a href="./doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Maximum number of favorite tables; set 0 to disable.</small></th><td><input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10" /><a class="restore-default hide" href="#NumFavoriteTables" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationWidth">Navigation panel width</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationWidth" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Set to 0 to collapse navigation panel.</small></th><td><input type="number" name="NavigationWidth" id="NavigationWidth" value="240" /><a class="restore-default hide" href="#NavigationWidth" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tree">
+<legend>Navigation tree</legend>
+    <p>Customize the navigation tree.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="MaxNavigationItems">Maximum items in branch</label><span class="doc"><a href="./doc/html/config.html#cfg_MaxNavigationItems" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>The number of items that can be displayed on each page of the navigation tree.</small></th><td><input type="number" name="MaxNavigationItems" id="MaxNavigationItems" value="50" /><a class="restore-default hide" href="#MaxNavigationItems" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeEnableGrouping">Group items in the tree</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeEnableGrouping" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Group items in the navigation tree (determined by the separator defined in the Databases and Tables tabs above).</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableGrouping" id="NavigationTreeEnableGrouping" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeEnableGrouping" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeEnableExpansion">Enable navigation tree expansion</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeEnableExpansion" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether to offer the possibility of tree expansion in the navigation panel.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableExpansion" id="NavigationTreeEnableExpansion" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeEnableExpansion" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowTables">Show tables in tree</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowTables" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether to show tables under database in the navigation tree</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowTables" id="NavigationTreeShowTables" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowTables" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowViews">Show views in tree</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowViews" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether to show views under database in the navigation tree</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowViews" id="NavigationTreeShowViews" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowViews" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowFunctions">Show functions in tree</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowFunctions" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether to show functions under database in the navigation tree</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowFunctions" id="NavigationTreeShowFunctions" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowFunctions" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowProcedures">Show procedures in tree</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowProcedures" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether to show procedures under database in the navigation tree</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowProcedures" id="NavigationTreeShowProcedures" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowProcedures" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowEvents">Show events in tree</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowEvents" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether to show events under database in the navigation tree</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowEvents" id="NavigationTreeShowEvents" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowEvents" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_servers">
+<legend>Servers</legend>
+    <p>Servers display options.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="NavigationDisplayServers">Display servers selection</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationDisplayServers" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Display server choice at the top of the navigation panel.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayServers" id="NavigationDisplayServers" checked="checked" /></span><a class="restore-default hide" href="#NavigationDisplayServers" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="DisplayServersList">Display servers as a list</label><span class="doc"><a href="./doc/html/config.html#cfg_DisplayServersList" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Show server listing as a list instead of a drop down.</small></th><td><span class="checkbox"><input type="checkbox" name="DisplayServersList" id="DisplayServersList" /></span><a class="restore-default hide" href="#DisplayServersList" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_databases">
+<legend>Databases</legend>
+    <p>Databases display options.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="NavigationTreeDisplayDbFilterMinimum">Minimum number of databases to display the database filter box</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDisplayDbFilterMinimum" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><input type="number" name="NavigationTreeDisplayDbFilterMinimum" id="NavigationTreeDisplayDbFilterMinimum" value="30" /><a class="restore-default hide" href="#NavigationTreeDisplayDbFilterMinimum" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeDbSeparator">Database tree separator</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDbSeparator" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>String that separates databases into different tree levels.</small></th><td><input type="text" size="25" name="NavigationTreeDbSeparator" id="NavigationTreeDbSeparator" value="_" /><a class="restore-default hide" href="#NavigationTreeDbSeparator" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tables">
+<legend>Tables</legend>
+    <p>Tables display options.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="NavigationTreeDefaultTabTable">Target for quick access icon</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDefaultTabTable" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><select class="all85" name="NavigationTreeDefaultTabTable" id="NavigationTreeDefaultTabTable"><option value="structure" selected="selected">Structure</option><option value="sql">SQL</option><option value="search">Search</option><option value="insert">Insert</option><option value="browse">Browse</option></select><a class="restore-default hide" href="#NavigationTreeDefaultTabTable" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeDefaultTabTable2">Target for second quick access icon</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDefaultTabTable2" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><select class="all85" name="NavigationTreeDefaultTabTable2" id="NavigationTreeDefaultTabTable2"><option value="" selected="selected"></option><option value="structure">Structure</option><option value="sql">SQL</option><option value="search">Search</option><option value="insert">Insert</option><option value="browse">Browse</option></select><a class="restore-default hide" href="#NavigationTreeDefaultTabTable2" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeTableSeparator">Table tree separator</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeTableSeparator" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>String that separates tables into different tree levels.</small></th><td><input type="text" size="25" name="NavigationTreeTableSeparator" id="NavigationTreeTableSeparator" value="__" /><a class="restore-default hide" href="#NavigationTreeTableSeparator" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeTableLevel">Maximum table tree depth</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeTableLevel" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><input type="number" name="NavigationTreeTableLevel" id="NavigationTreeTableLevel" value="1" /><a class="restore-default hide" href="#NavigationTreeTableLevel" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+validateField('FirstLevelNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NumRecentTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NumFavoriteTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NavigationWidth', 'PMA_validateNonNegativeNumber', true);
+validateField('MaxNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NavigationTreeTableLevel', 'PMA_validatePositiveNumber', true);
+$.extend(PMA_messages, {
+	'error_nan_p': 'Not a positive number!',
+	'error_nan_nneg': 'Not a non-negative number!',
+	'error_incorrect_port': 'Not a valid port number!',
+	'error_invalid_value': 'Incorrect value!',
+	'error_value_lte': 'Value must be equal or lower than %s!'});
+$.extend(defaultValues, {
+	'ShowDatabasesNavigationAsTree': true,
+	'NavigationLinkWithMainPanel': true,
+	'NavigationDisplayLogo': true,
+	'NavigationLogoLink': 'index.php',
+	'NavigationLogoLinkWindow': ['main'],
+	'NavigationTreePointerEnable': true,
+	'FirstLevelNavigationItems': '100',
+	'NavigationTreeDisplayItemFilterMinimum': '30',
+	'NumRecentTables': '10',
+	'NumFavoriteTables': '10',
+	'NavigationWidth': '240',
+	'MaxNavigationItems': '50',
+	'NavigationTreeEnableGrouping': true,
+	'NavigationTreeEnableExpansion': true,
+	'NavigationTreeShowTables': true,
+	'NavigationTreeShowViews': true,
+	'NavigationTreeShowFunctions': true,
+	'NavigationTreeShowProcedures': true,
+	'NavigationTreeShowEvents': true,
+	'NavigationDisplayServers': true,
+	'DisplayServersList': false,
+	'NavigationTreeDisplayDbFilterMinimum': '30',
+	'NavigationTreeDbSeparator': '_',
+	'NavigationTreeDefaultTabTable': ['structure'],
+	'NavigationTreeDefaultTabTable2': [''],
+	'NavigationTreeTableSeparator': '__',
+	'NavigationTreeTableLevel': '1'});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script>
+</div></div></div></div><div class="pma_drop_handler">Drop files here</div><div class="pma_sql_import_status"><h2>SQL upload ( <span class="pma_import_count">0</span> ) <span class="close">x</span><span class="minimize">-</span></h2><div></div></div></div><noscript><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /> Javascript must be enabled past this point!</div></noscript><div id='floating_menubar'></div><div id='serverinfo'><img src="themes/dot.gif" title="" alt="" class="icon ic_s_host item" /><a href="index.php" class="item">Server: 127.0.0.1</a><span class='separator item'>&nbsp;»</span><img src="themes/dot.gif" title="" alt="" class="icon ic_s_db item" /><a href="db_structure.php?db=carreservation" class="item">Database: carreservation</a><span class='separator item'>&nbsp;»</span><img src="themes/dot.gif" title="" alt="" class="icon ic_s_tbl item" /><a href="sql.php?db=carreservation&amp;table=customer" class="item">Table: customer</a><div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><i class="scrollindicator scrollindicator--left"><a href="#" class="tab"></a></i><div class="navigationbar"><ul id="topmenu"  class="resizable-menu"><li>
+
+            <a href="sql.php?db=carreservation&amp;table=customer&amp;pos=0" class="tab">
+            <img src="themes/dot.gif" title="Browse" alt="Browse" class="icon ic_b_browse" />&nbsp;Browse
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_structure.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Structure" alt="Structure" class="icon ic_b_props" />&nbsp;Structure
+            </a>
+        </li>
+<li class="active">
+
+            <a href="tbl_sql.php?db=carreservation&amp;table=customer" class="tabactive">
+            <img src="themes/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql" />&nbsp;SQL
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_select.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Search" alt="Search" class="icon ic_b_search" />&nbsp;Search
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_change.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Insert" alt="Insert" class="icon ic_b_insrow" />&nbsp;Insert
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_export.php?db=carreservation&amp;table=customer&amp;single_table=true" class="tab">
+            <img src="themes/dot.gif" title="Export" alt="Export" class="icon ic_b_tblexport" />&nbsp;Export
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_import.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Import" alt="Import" class="icon ic_b_tblimport" />&nbsp;Import
+            </a>
+        </li>
+<li>
+
+            <a href="server_privileges.php?db=carreservation&amp;table=customer&amp;checkprivsdb=carreservation&amp;checkprivstable=customer&amp;viewing_mode=table" class="tab">
+            <img src="themes/dot.gif" title="Privileges" alt="Privileges" class="icon ic_s_rights" />&nbsp;Privileges
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_operations.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Operations" alt="Operations" class="icon ic_b_tblops" />&nbsp;Operations
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_tracking.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Tracking" alt="Tracking" class="icon ic_eye" />&nbsp;Tracking
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_triggers.php?db=carreservation&amp;table=customer" class="tab">
+            <img src="themes/dot.gif" title="Triggers" alt="Triggers" class="icon ic_b_triggers" />&nbsp;Triggers
+            </a>
+        </li>
+<div class="clearfloat"></div></ul></div>
+<i class="scrollindicator scrollindicator--right"><a href="#" class="tab"></a></i></div>
+<span id="page_nav_icons"><span id="lock_page_icon"></span><span id="page_settings_icon"><img src="themes/dot.gif" title="Page-related settings" alt="Page-related settings" class="icon ic_s_cog" /></span><a id="goto_pagetop" href="#"><img src="themes/dot.gif" title="Click on the bar to scroll to top of page" alt="Click on the bar to scroll to top of page" class="icon ic_s_top" /></a></span><div id="pma_console_container">
+    <div id="pma_console">
+                <div class="toolbar collapsed">
+                    <div class="switch_button console_switch">
+            <img src="themes/dot.gif" title="SQL Query Console" alt="SQL Query Console" class="icon ic_console" />
+            <span>Console</span>
+        </div>
+                            <div class="button clear">
+            
+            <span>Clear</span>
+        </div>
+                            <div class="button history">
+            
+            <span>History</span>
+        </div>
+                            <div class="button options">
+            
+            <span>Options</span>
+        </div>
+                            <div class="button bookmarks">
+            
+            <span>Bookmarks</span>
+        </div>
+                            <div class="button debug hide">
+            
+            <span>Debug SQL</span>
+        </div>
+            </div>
+                <div class="content">
+            <div class="console_message_container">
+                <div class="message welcome">
+                    <span id="instructions-0">
+                        Press Ctrl+Enter to execute query                    </span>
+                    <span class="hide" id="instructions-1">
+                        Press Enter to execute query                    </span>
+                </div>
+                                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="vehicle">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">CREATE TABLE Reservation
+               (customerID          int     NOT NULL,
+  	      vehicleID        int NOT NULL ,
+  	      engineNumber     VARCHAR(30) ,
+                dateFrom        date ,
+                dateTo       date ,
+                timeFrom  time  ,
+                timeTo time ,
+                pickupLocation VARCHAR(50),
+                dropoffLocation VARCHAR(50),
+  CONSTRAINT Reserve_PK PRIMARY KEY (vehicleID,customerID),
+  CONSTRAINT CustReserv_FK1 FOREIGN KEY (customerID)
+  	REFERENCES Customer(customerID),
+  CONSTRAINT VehReserv_FK1 FOREIGN KEY (vehicleID)
+    	REFERENCES Vehicle(vehicleID))</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="vehicle">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">ALTER TABLE Vehicle AUTO_INCREMENT=10001</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="location">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `location`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="location">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `location`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="reservation">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `reservation`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO customer (username, password, email, firstName, middleName, lastName,phoneNumber, state, city,zipcode, Address)
+VALUES (&#039;fly&#039;, &#039;rebel&#039;,&#039;fu@gmail.com&#039;,&#039;Filli&#039;,&#039;Gov&#039;,&#039;Dan&#039;,&#039;7736530011&#039;,&#039;IL&#039;, &#039;Chicago&#039;, &#039;60603&#039;,&#039;405 N. Street&#039;)</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO customer (username, password, email, firstName, middleName, lastName,phoneNumber, state, city,zipcode, Address)
+VALUES (&#039;Zon&#039;, &#039;did&#039;,&#039;zoo@gmail.com&#039;,&#039;Xaomi&#039;,&#039;Zen&#039;,&#039;Fifi&#039;,&#039;3126530011&#039;,&#039;NY&#039;, &#039;NY City&#039;, &#039;40005&#039;,&#039;1205 S. Street&#039;)</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO customer (username, password, email, firstName, middleName, lastName,phoneNumber, state, city,zipcode, Address)
+VALUES (&#039;Bio&#039;, &#039;pip&#039;,&#039;vbv@gmail.com&#039;,&#039;Amy&#039;,&#039;Con&#039;,&#039;Dov&#039;,&#039;3126533121&#039;,&#039;TX&#039;, &#039;Huston&#039;, &#039;50002&#039;,&#039;1100 W. Street&#039;)</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `customer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="location">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `location`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO location (locationName, state, city,zipcode)
+VALUES (&#039;Addison&#039;, &#039;IL&#039;, &#039;Chicago&#039;, &#039;60002&#039;)</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="location">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `location`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO location (locationName, state, city,zipcode)
+VALUES (&#039;Hyde Park&#039;, &#039;IL&#039;, &#039;Chicago&#039;, &#039;60003&#039;)</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="location">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `location`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO location (locationName, state, city,zipcode)
+VALUES (&#039;Anderson ville&#039;, &#039;TX&#039;, &#039;Huston&#039;, &#039;51003&#039;)</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="carreservation" targettable="location">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `location`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO vehicle (plateNumber,vinNumber, engineNumber, brandName, image, modelName, mpg, rate, style, transmission, trimLevel, Year, locationID)
+VALUES (&#039;ZD982370&#039;, &#039;1C6RR7TT2ES224336&#039;, &#039;6U90000BB41202329&#039;, &#039;BMW&#039;, &#039;bmw1.png&#039;,&#039;I3&#039;,16,70,&#039;Sedan&#039;,&#039;Automatic&#039;,&#039;SE&#039;,2017,103)</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="carreservation" targettable="customer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>carreservation</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">INSERT INTO vehicle (plateNumber,vinNumber, engineNumber, brandName, image, modelName, mpg, rate, style, transmission, trimLevel, Year, locationID)
+VALUES (&#039;ZD901256&#039;, &#039;1C6RR7TT2ES200336&#039;, &#039;1U90880BB41202329&#039;, &#039;TOYOTA&#039;, &#039;toyota1.png&#039;,&#039;Corolla&#039;,29,72,&#039;Sedan&#039;,&#039;Automatic&#039;,&#039;LE&#039;,2016,102)</span>
+                        </div>
+                                                </div><!-- console_message_container -->
+            <div class="query_input">
+                <span class="console_query_input"></span>
+            </div>
+        </div><!-- message end -->
+                <div class="mid_layer"></div>
+                <div class="card" id="debug_console">
+            <div class="toolbar ">
+                    <div class="button order order_asc">
+            
+            <span>ascending</span>
+        </div>
+                            <div class="button order order_desc">
+            
+            <span>descending</span>
+        </div>
+                            <div class="text">
+            
+            <span>Order:</span>
+        </div>
+                            <div class="switch_button">
+            
+            <span>Debug SQL</span>
+        </div>
+                            <div class="button order_by sort_count">
+            
+            <span>Count</span>
+        </div>
+                            <div class="button order_by sort_exec">
+            
+            <span>Execution order</span>
+        </div>
+                            <div class="button order_by sort_time">
+            
+            <span>Time taken</span>
+        </div>
+                            <div class="text">
+            
+            <span>Order by:</span>
+        </div>
+                            <div class="button group_queries">
+            
+            <span>Group queries</span>
+        </div>
+                            <div class="button ungroup_queries">
+            
+            <span>Ungroup queries</span>
+        </div>
+            </div>
+            <div class="content debug">
+                <div class="message welcome"></div>
+                <div class="debugLog"></div>
+            </div> <!-- Content -->
+            <div class="templates">
+                <div class="debug_query action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action dbg_show_trace">
+            Show trace
+                    </span>
+                            <span class="action dbg_hide_trace">
+            Hide trace
+                    </span>
+                            <span class="text count hide">
+            Count
+                    </span>
+                            <span class="text time">
+            Time taken
+                    </span>
+            </div>
+            </div> <!-- Template -->
+        </div> <!-- Debug SQL card -->
+                    <div class="card" id="pma_bookmarks">
+                <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Bookmarks</span>
+        </div>
+                            <div class="button refresh">
+            
+            <span>Refresh</span>
+        </div>
+                            <div class="button add">
+            
+            <span>Add</span>
+        </div>
+            </div>
+                <div class="content bookmark">
+                    <div class="message welcome">
+    <span>No bookmarks</span>
+</div>
+
+                </div>
+                <div class="mid_layer"></div>
+                <div class="card add">
+                    <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Add bookmark</span>
+        </div>
+            </div>
+                    <div class="content add_bookmark">
+                        <div class="options">
+                            <label>
+                                Label: <input type="text" name="label">
+                            </label>
+                            <label>
+                                Target database: <input type="text" name="targetdb">
+                            </label>
+                            <label>
+                                <input type="checkbox" name="shared">Share this bookmark                            </label>
+                            <button type="submit" name="submit">OK</button>
+                        </div> <!-- options -->
+                        <div class="query_input">
+                            <span class="bookmark_add_input"></span>
+                        </div>
+                    </div>
+                </div> <!-- Add bookmark card -->
+            </div> <!-- Bookmarks card -->
+                        <div class="card" id="pma_console_options">
+            <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Options</span>
+        </div>
+                            <div class="button default">
+            
+            <span>Set default</span>
+        </div>
+            </div>
+            <div class="content">
+                <label>
+                    <input type="checkbox" name="always_expand">Always expand query messages                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="start_history">Show query history at start                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="current_query">Show current browsing query                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enter_executes">
+                        Execute queries on Enter and insert new line with Shift + Enter. To make this permanent, view settings.                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="dark_theme">Switch to dark theme                </label>
+                <br>
+            </div>
+        </div> <!-- Options card -->
+        <div class="templates">
+                        <div class="query_actions">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                    </span>
+            </div>
+        </div>
+    </div> <!-- #console end -->
+</div> <!-- #console_container end -->
+<div id="page_content"><div id="page_settings_modal"><div class="page_settings"><form method="post" action="tbl_sql.php?db=carreservation&amp;table=customer&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value="" /><input type="hidden" name="check_page_refresh"  id="check_page_refresh" value="" />
+<input type="hidden" name="token" value="o%fnZVk*2T-u7&lt;r" />
+<input type="hidden" name="submit_save" value="Sql" /><input type="hidden" name="token" value="o%fnZVk*2T-u7&lt;r" /><ul class="tabs responsivetable">
+
+                                    <li>
+
+            <a href="#Sql_queries">
+            SQL queries
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Sql_box">
+            SQL Query box
+            </a>
+        </li>
+            </ul>
+<br /><div class="tabs_contents"><fieldset class="optbox" id="Sql_queries">
+<legend>SQL queries</legend>
+    <p>SQL queries settings.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="ShowSQL">Show SQL queries</label><span class="doc"><a href="./doc/html/config.html#cfg_ShowSQL" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Defines whether SQL queries generated by phpMyAdmin should be displayed.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowSQL" id="ShowSQL" checked="checked" /></span><a class="restore-default hide" href="#ShowSQL" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="Confirm">Confirm DROP queries</label><span class="doc"><a href="./doc/html/config.html#cfg_Confirm" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Whether a warning ("Are your really sure…") should be displayed when you're about to lose data.</small></th><td><span class="checkbox"><input type="checkbox" name="Confirm" id="Confirm" checked="checked" /></span><a class="restore-default hide" href="#Confirm" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="QueryHistoryMax">Query history length</label><span class="doc"><a href="./doc/html/config.html#cfg_QueryHistoryMax" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>How many queries are kept in history.</small></th><td><input type="number" name="QueryHistoryMax" id="QueryHistoryMax" value="25" /><span class="field-comment-mark" title="maximum 25">i</span><a class="restore-default hide" href="#QueryHistoryMax" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="IgnoreMultiSubmitErrors">Ignore multiple statement errors</label><span class="doc"><a href="./doc/html/config.html#cfg_IgnoreMultiSubmitErrors" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>If enabled, phpMyAdmin continues computing multiple-statement queries even if one of the queries failed.</small></th><td><span class="checkbox"><input type="checkbox" name="IgnoreMultiSubmitErrors" id="IgnoreMultiSubmitErrors" /></span><a class="restore-default hide" href="#IgnoreMultiSubmitErrors" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="MaxCharactersInDisplayedSQL">Maximum displayed SQL length</label><span class="doc"><a href="./doc/html/config.html#cfg_MaxCharactersInDisplayedSQL" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Maximum number of characters used when a SQL query is displayed.</small></th><td><input type="number" name="MaxCharactersInDisplayedSQL" id="MaxCharactersInDisplayedSQL" value="1000" /><a class="restore-default hide" href="#MaxCharactersInDisplayedSQL" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="RetainQueryBox">Retain query box</label><span class="doc"><a href="./doc/html/config.html#cfg_RetainQueryBox" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Defines whether the query box should stay on-screen after its submission.</small></th><td><span class="checkbox"><input type="checkbox" name="RetainQueryBox" id="RetainQueryBox" /></span><a class="restore-default hide" href="#RetainQueryBox" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="CodemirrorEnable">Enable CodeMirror</label><span class="doc"><a href="./doc/html/config.html#cfg_CodemirrorEnable" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Use user-friendly editor for editing SQL queries (CodeMirror) with syntax highlighting and line numbers.</small></th><td><span class="checkbox"><input type="checkbox" name="CodemirrorEnable" id="CodemirrorEnable" checked="checked" /></span><a class="restore-default hide" href="#CodemirrorEnable" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="LintEnable">Enable linter</label><span class="doc"><a href="./doc/html/config.html#cfg_LintEnable" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Find any errors in the query before executing it. Requires CodeMirror to be enabled.</small></th><td><span class="checkbox"><input type="checkbox" name="LintEnable" id="LintEnable" checked="checked" /></span><a class="restore-default hide" href="#LintEnable" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="EnableAutocompleteForTablesAndColumns">Enable autocomplete for table and column names</label><span class="doc"><a href="./doc/html/config.html#cfg_EnableAutocompleteForTablesAndColumns" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Autocomplete of the table and column names in the SQL queries.</small></th><td><span class="checkbox"><input type="checkbox" name="EnableAutocompleteForTablesAndColumns" id="EnableAutocompleteForTablesAndColumns" checked="checked" /></span><a class="restore-default hide" href="#EnableAutocompleteForTablesAndColumns" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="DefaultForeignKeyChecks">Foreign key checks</label><span class="doc"><a href="./doc/html/config.html#cfg_DefaultForeignKeyChecks" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span><small>Default value for foreign key checks checkbox for some queries.</small></th><td><select class="all85" name="DefaultForeignKeyChecks" id="DefaultForeignKeyChecks"><option value="default" selected="selected">Server default</option><option value="enable">Enable</option><option value="disable">Disable</option></select><a class="restore-default hide" href="#DefaultForeignKeyChecks" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Sql_box">
+<legend>SQL Query box</legend>
+    <p>Customize links shown in SQL Query boxes.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="SQLQuery-Edit">Edit</label><span class="doc"><a href="./doc/html/config.html#cfg_SQLQuery_Edit" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><span class="checkbox"><input type="checkbox" name="SQLQuery-Edit" id="SQLQuery-Edit" checked="checked" /></span><a class="restore-default hide" href="#SQLQuery-Edit" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="SQLQuery-Explain">Explain SQL</label><span class="doc"><a href="./doc/html/config.html#cfg_SQLQuery_Explain" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><span class="checkbox"><input type="checkbox" name="SQLQuery-Explain" id="SQLQuery-Explain" checked="checked" /></span><a class="restore-default hide" href="#SQLQuery-Explain" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="SQLQuery-ShowAsPHP">Create PHP code</label><span class="doc"><a href="./doc/html/config.html#cfg_SQLQuery_ShowAsPHP" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><span class="checkbox"><input type="checkbox" name="SQLQuery-ShowAsPHP" id="SQLQuery-ShowAsPHP" checked="checked" /></span><a class="restore-default hide" href="#SQLQuery-ShowAsPHP" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="SQLQuery-Refresh">Refresh</label><span class="doc"><a href="./doc/html/config.html#cfg_SQLQuery_Refresh" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>
+</span></th><td><span class="checkbox"><input type="checkbox" name="SQLQuery-Refresh" id="SQLQuery-Refresh" checked="checked" /></span><a class="restore-default hide" href="#SQLQuery-Refresh" title="Restore default value"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+validateField('QueryHistoryMax', 'PMA_validatePositiveNumber', true);
+validateField('QueryHistoryMax', 'PMA_validateUpperBound', true, ['25']);
+validateField('MaxCharactersInDisplayedSQL', 'PMA_validatePositiveNumber', true);
+$.extend(PMA_messages, {
+	'error_nan_p': 'Not a positive number!',
+	'error_nan_nneg': 'Not a non-negative number!',
+	'error_incorrect_port': 'Not a valid port number!',
+	'error_invalid_value': 'Incorrect value!',
+	'error_value_lte': 'Value must be equal or lower than %s!'});
+$.extend(defaultValues, {
+	'ShowSQL': true,
+	'Confirm': true,
+	'QueryHistoryMax': '25',
+	'IgnoreMultiSubmitErrors': false,
+	'MaxCharactersInDisplayedSQL': '1000',
+	'RetainQueryBox': false,
+	'CodemirrorEnable': true,
+	'LintEnable': true,
+	'EnableAutocompleteForTablesAndColumns': true,
+	'DefaultForeignKeyChecks': ['default'],
+	'SQLQuery-Edit': true,
+	'SQLQuery-Explain': true,
+	'SQLQuery-ShowAsPHP': true,
+	'SQLQuery-Refresh': true});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script>
+</div></div><form method="post" action="import.php"  enctype="multipart/form-data" class="ajax lock-page" id="sqlqueryform" name="sqlform">
+<input type="hidden" name="is_js_confirmed" value="0" />
+<input type="hidden" name="db" value="carreservation" /><input type="hidden" name="table" value="customer" /><input type="hidden" name="token" value="o%fnZVk*2T-u7&lt;r" />
+<input type="hidden" name="pos" value="0" />
+<input type="hidden" name="goto" value="tbl_sql.php" />
+<input type="hidden" name="message_to_show" value="Your SQL query has been executed successfully." />
+<input type="hidden" name="prev_sql_query" value="" />
+<a id="querybox"></a><div id="queryboxcontainer"><fieldset id="queryboxf"><legend>Run SQL query/queries on table <a href="sql.php?db=carreservation&amp;table=customer" >carreservation.customer</a>: <a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fselect.html" target="mysql_doc"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a></legend><div id="queryfieldscontainer"><div id="sqlquerycontainer"><textarea tabindex="100" name="sql_query" id="sqlquery"  cols="40"  rows="30">SELECT * FROM `customer` WHERE 1</textarea><div id="querymessage"></div><input type="button" value="SELECT *" id="selectall" class="button sqlbutton" /><input type="button" value="SELECT" id="select" class="button sqlbutton" /><input type="button" value="INSERT" id="insert" class="button sqlbutton" /><input type="button" value="UPDATE" id="update" class="button sqlbutton" /><input type="button" value="DELETE" id="delete" class="button sqlbutton" /><input type="button" value="Clear" id="clear" class="button sqlbutton" /><input type="button" value="Format" id="format" class="button sqlbutton" /><input type="button" value="Get auto-saved query" id="saved" class="button sqlbutton" /><div><input type="checkbox" name="parameterized" id="parameterized" /><label for="parameterized">Bind parameters</label><a href="./doc/html/faq.html#faq6-40" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a><div id="parametersDiv"></div></div></div>
+<div id="tablefieldscontainer"><label>Columns</label><select id="tablefields" name="dummy" size="13" multiple="multiple" ondblclick="insertValueQuery()"><option value="`customerID`" title="">customerID</option>
+<option value="`username`" title="">username</option>
+<option value="`firstName`" title="">firstName</option>
+<option value="`middleName`" title="">middleName</option>
+<option value="`lastName`" title="">lastName</option>
+<option value="`email`" title="">email</option>
+<option value="`password`" title="">password</option>
+<option value="`phoneNumber`" title="">phoneNumber</option>
+<option value="`Address`" title="">Address</option>
+<option value="`city`" title="">city</option>
+<option value="`state`" title="">state</option>
+<option value="`zipcode`" title="">zipcode</option>
+<option value="`admin`" title="">admin</option>
+</select><div id="tablefieldinsertbuttoncontainer"><input type="button" class="button" name="insert" value="&lt;&lt;" onclick="insertValueQuery()" title="Insert" /></div>
+</div>
+<div class="clearfloat"></div>
+</div>
+<div id="bookmarkoptions"><div class="formelement"><label for="bkm_label">Bookmark this SQL query:</label><input type="text" name="bkm_label" id="bkm_label" tabindex="110" value="" /></div><div class="formelement"><input type="checkbox" name="bkm_all_users" tabindex="111" id="id_bkm_all_users" value="true" /><label for="id_bkm_all_users">Let every user access this bookmark</label></div><div class="formelement"><input type="checkbox" name="bkm_replace" tabindex="112" id="id_bkm_replace" value="true" /><label for="id_bkm_replace">Replace existing bookmark of same name</label></div></div><div class="clearfloat"></div>
+</fieldset>
+</div>
+<fieldset id="queryboxfooter" class="tblFooters">
+<div class="formelement">
+</div>
+<div class="formelement"><label for="id_sql_delimiter">[ Delimiter</label>
+<input type="text" name="sql_delimiter" tabindex="131" size="3" value=";" id="id_sql_delimiter" /> ]</div><div class="formelement"><input type="checkbox" name="show_query" value="1" id="checkbox_show_query" tabindex="132" checked="checked" /><label for="checkbox_show_query">Show this query here again</label></div><div class="formelement"><input type="checkbox" name="retain_query_box" value="1" id="retain_query_box" tabindex="133"  /><label for="retain_query_box">Retain query box</label></div><div class="formelement"><input type="checkbox" name="rollback_query" value="1" id="rollback_query" tabindex="134" /><label for="rollback_query">Rollback when finished</label></div><div class="formelement"><input type="hidden" name="fk_checks" value="0">
+<input type="checkbox" name="fk_checks" id="fk_checks" value="1" checked>
+<label for="fk_checks">Enable foreign key checks</label>
+</div><input type="submit" id="button_submit_query" name="SQL" tabindex="200" value="Go" />
+<div class="clearfloat"></div>
+</fieldset>
+</form>
+<div id="sqlqueryresultsouter"></div></div><div id="selflink" class="print_ignore"><a href="tbl_sql.php?db=carreservation&amp;table=customer&amp;server=1&amp;target=" title="Open new phpMyAdmin window" target="_blank" rel="noopener noreferrer"><img src="themes/dot.gif" title="Open new phpMyAdmin window" alt="Open new phpMyAdmin window" class="icon ic_window-new" /></a></div><div class="clearfloat" id="pma_errors"></div><script data-cfasync="false" type="text/javascript">// <![CDATA[
+var debugSQLInfo = 'null';
+AJAX.scriptHandler;
+$(function() {});
+// ]]></script></body></html>

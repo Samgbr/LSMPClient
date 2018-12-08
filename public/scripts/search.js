@@ -2,17 +2,9 @@ if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var c = url.searchParams.get("id");
-
-console.log(c);
-
 $(document).ready(function () {
 
-     $(".greet").text("Welcome ");
+     $(".greet").text("Welcome " + getCookie("login"));
 
     $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
@@ -20,12 +12,12 @@ $(document).ready(function () {
 
      $( "#profile" ).click(function() {
         //add href when clicked with user id
-        $("#profile").attr("href", "/profile?id="+c);
+        $("#profile").attr("href", "/profile");
     });
 
      $( "#order" ).click(function() {
         //add href when clicked with user id
-        $("#order").attr("href", "/orders?id="+c);
+        $("#order").attr("href", "/orders");
     });
 
      $(".order").hide();
@@ -71,9 +63,10 @@ function myfunc(url) {
                     inventorylink: book.link[0].url,
                     reviewslink: book.link[1].url,
                     creviewlink: book.link[2].url,
-                    id:c
+                    id:getCookie("name")
                 };
-
+                setCookie("reviewslink",bookData.reviewslink,30);
+                setCookie("creviewlink",bookData.creviewlink,30);
                 //replace all the variables within the compiled script tag above with each value of employee data.
                 var bookElementToAppend = book_modal_template(bookData);
                 //embed the html element which contains employee information into the html div tag with id 'content'
@@ -87,22 +80,26 @@ function myfunc(url) {
 
 
 function qtyOnHandfunc(invlink,price) {
-    
      $.getJSON(invlink, function (book) {
 
             var qtyonhand = JSON.stringify(book.qty);
-            var inv = JSON.stringify(book.link[0].url);
+            var inv = book.link[0].url;
+            
             $("#qty").text("In stock: " + qtyonhand);
                 if(qtyonhand==0) {
                     $(".orderInfo").text("Sorry out of stock");
                 }
                 if(qtyonhand>0) {
                     $(".orderInfo").hide();
-                    $(".order").attr("href", "/Order?link="+inv+"&id="+c+"&pid="+getProductID()+"&price="+price);
+                    setCookie("productid",getProductID(),30);
+                    setCookie("order",inv,30);
+                    setCookie("price",price,30);
+                    //$(".order").attr("href", "/Order?link="+inv+"&id="+c+"&pid="+getProductID()+"&price="+price);
+                    $(".order").attr("href", "/Order");
                     $(".order").text("Order Here...");
                     $(".order").show();
                 }
-                $('#productID').val('');
+                //$('#productID').val('');
         });
     
 }
@@ -126,6 +123,13 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function checkCookie() {

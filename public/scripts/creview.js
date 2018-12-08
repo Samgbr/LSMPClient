@@ -2,24 +2,14 @@ if(checkCookie().includes("PA")) {
     window.location='/';
 }
 
-var ref = window.location.href;
-
-var url = new URL(ref);
-
-var link = url.searchParams.get("link");
-
-var id = url.searchParams.get("id");
-
-var pid = url.searchParams.get("pid");
-
-
-console.log(link+ " "+id+ " "+pid);
-
 
 
 $(document).ready(function () {
 
-     var reviewResourceURI= "http://localhost:8082/ProductReview/productreviewservice/productreview";
+    var hlink=getCookie("creviewlink");
+
+     var reviewResourceURI= hlink+'/'+getCookie("productid")+'/'+getCookie("name");
+     //alert(reviewResourceURI);
 
      $.ajax({
                 method: 'GET',
@@ -27,8 +17,8 @@ $(document).ready(function () {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                url: reviewResourceURI+'/'+id+'/'+pid,
-                data: JSON.stringify(id),
+                url: reviewResourceURI,
+                data: JSON.stringify(getCookie("name")),
                 dataType: 'json',
                 encode: true
             }).done(function(returnedData){
@@ -39,8 +29,8 @@ $(document).ready(function () {
                         $('form').submit(function (event) {
 
                             var formData = {
-                                'productID': id,
-                                'profileID': pid,
+                                'productID': getCookie("productid"),
+                                'profileID': getCookie("name"),
                                 'review': getReview(),
                                 'rating': getRating()
                             };
@@ -51,14 +41,14 @@ $(document).ready(function () {
                                     'Accept': 'application/json',
                                     'Content-Type': 'application/json'
                                 },
-                                url: reviewResourceURI,
+                                url: hlink,
                                 data: JSON.stringify(formData),
                                 dataType: 'json',
                                 encode: true
                             }).done(function(returnedData){
 
                                 alert("Review has been added");
-                                window.location = '/home?id='+pid;
+                                window.location = '/home';
 
                             });
 
@@ -69,11 +59,11 @@ $(document).ready(function () {
                                         
                 } else {
                     alert("Already Reviewd: "+checkCookie());
-                    window.location='/home?id='+returnedData.profileID;
+                    window.location='/home';
                 }
             });
 
-    $("#back").attr("href", "/home?id="+pid);
+    $("#back").attr("href", "/home");
     $( "#logout" ).click(function() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path='/';";
          event.stopPropagation();
